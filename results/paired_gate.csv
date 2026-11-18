@@ -1,0 +1,81 @@
+batch,tag,init_idx,condition,vanilla_grasp,vanilla_task,corr_grasp,corr_task,gate_grasp,gate_task,cls_2B_grasp,cls_2B_task,cls_2C_grasp,cls_2C_task,g_close_lat_cm,c_close_lat_cm,g_close_corr_active,c_close_corr_active,g_n_corr_steps,g_n_masked_steps,g_mask_mismatch,g_activations,g_tgt_lift_cm,g_transport,steps_v,steps_c,steps_g
+main,init10_orig,10,orig,True,True,True,True,True,True,ok,ok,ok,ok,2.3,2.0,0,0,6,83,0,"[[44, 50]]",29.1,,154,148,142
+main,init10_rot,10,rot,False,False,True,True,True,True,save,save,save,save,1.0,1.0,0,0,4,86,0,"[[50, 54]]",23.4,,280,154,154
+main,init10_trans,10,trans,True,True,True,True,True,False,ok,ok,ok,break,3.2,3.2,1,1,9,97,0,"[[47, 50], [148, 154]]",33.0,transport_drop,185,209,280
+stress_y,init10_trans_y,10,trans_y,False,False,True,True,False,False,save,save,fail,fail,3.5,3.5,1,0,15,192,0,"[[46, 54], [56, 57], [59, 59], [71, 71], [274, 274]]",0.0,,280,221,280
+main,init11_orig,11,orig,True,True,False,False,True,True,break,break,ok,ok,2.5,2.5,1,1,5,87,0,"[[41, 46]]",27.8,,143,280,139
+main,init11_rot,11,rot,False,False,True,True,True,True,save,save,save,save,2.8,2.8,1,1,6,83,0,"[[44, 47], [125, 125], [130, 131], [133, 133], [135, 135]]",25.3,,280,136,137
+main,init11_trans,11,trans,False,False,True,False,False,False,save,fail,fail,fail,4.8,4.0,1,1,79,109,0,"[[41, 47], [187, 187], [190, 213], [215, 218], [221, 257], [259, 259], [261, 266], [268, 268], [270, 274], [276, 277], [279, 279]]",0.0,,280,280,280
+stress_y,init11_trans_y,11,trans_y,False,False,True,True,True,True,save,save,save,save,2.0,2.0,0,0,10,103,0,"[[38, 48]]",25.1,,280,185,160
+main,init12_orig,12,orig,True,True,False,False,False,False,break,break,break,break,,,,,7,0,0,"[[58, 65]]",0.0,,180,280,280
+main,init12_rot,12,rot,False,False,False,False,False,False,fail,fail,fail,fail,3.4,3.4,1,1,4,122,0,"[[56, 57], [133, 136]]",0.0,,280,280,280
+main,init12_trans,12,trans,False,False,True,True,True,False,save,save,save,fail,2.1,2.1,1,1,5,97,0,"[[54, 59]]",24.2,transport_drop,280,158,280
+stress_y,init12_trans_y,12,trans_y,True,True,True,True,True,True,ok,ok,ok,ok,1.3,1.3,0,0,4,83,0,"[[54, 58]]",21.2,,164,154,154
+main,init13_orig,13,orig,True,True,True,True,True,True,ok,ok,ok,ok,1.3,1.3,0,0,5,98,0,"[[46, 51]]",26.2,,177,187,187
+main,init13_rot,13,rot,True,True,True,True,True,True,ok,ok,ok,ok,1.6,1.6,0,0,6,89,0,"[[45, 51]]",25.7,,189,155,155
+main,init13_trans,13,trans,True,True,True,True,True,True,ok,ok,ok,ok,0.7,0.7,0,0,0,86,0,[],27.6,,150,150,150
+stress_y,init13_trans_y,13,trans_y,True,True,True,True,True,True,ok,ok,ok,ok,2.5,2.4,0,0,11,73,0,"[[44, 55]]",25.5,,179,160,138
+main,init14_orig,14,orig,True,True,True,True,True,True,ok,ok,ok,ok,2.3,2.5,0,0,7,82,0,"[[46, 53]]",29.3,,145,152,147
+main,init14_rot,14,rot,True,True,True,True,True,True,ok,ok,ok,ok,1.3,1.3,0,0,5,85,0,"[[46, 51]]",26.1,,172,147,147
+main,init14_trans,14,trans,False,False,False,False,False,False,fail,fail,fail,fail,2.4,2.4,1,1,208,12,0,"[[52, 260]]",0.0,,280,280,280
+stress_y,init14_trans_y,14,trans_y,False,False,True,True,True,True,save,save,save,save,2.6,2.5,0,0,9,73,0,"[[45, 54], [56, 56]]",24.3,,280,226,145
+main,init15_orig,15,orig,False,False,True,True,True,True,save,save,save,save,0.4,0.4,0,0,4,93,0,"[[44, 48]]",25.6,,280,153,153
+main,init15_rot,15,rot,False,False,False,False,False,False,fail,fail,fail,fail,3.8,3.8,0,0,4,146,0,"[[47, 47], [49, 50], [122, 125]]",0.4,,280,280,280
+main,init15_trans,15,trans,False,False,True,False,True,True,save,fail,save,save,2.4,2.4,0,0,5,87,0,"[[45, 50]]",30.6,,280,280,145
+stress_y,init15_trans_y,15,trans_y,False,False,True,False,True,False,save,fail,save,fail,3.1,3.1,0,0,14,69,0,"[[45, 53], [125, 131]]",23.6,transport_drop,280,280,280
+main,init16_orig,16,orig,True,True,True,True,True,True,ok,ok,ok,ok,1.2,1.2,1,1,6,93,0,"[[45, 51]]",29.0,,143,154,154
+main,init16_rot,16,rot,True,True,True,True,True,True,ok,ok,ok,ok,1.3,1.3,1,1,4,79,0,"[[48, 52]]",23.7,,148,138,138
+main,init16_trans,16,trans,False,False,True,True,True,True,save,save,save,save,2.9,2.9,1,1,8,89,0,"[[54, 56], [145, 148], [150, 150]]",29.9,,280,163,153
+stress_y,init16_trans_y,16,trans_y,True,True,True,True,True,False,ok,ok,ok,break,2.8,2.5,0,0,5,227,0,"[[46, 49], [53, 53], [119, 121], [125, 125], [128, 128]]",22.5,transport_drop,218,145,280
+main,init17_orig,17,orig,True,True,True,True,True,True,ok,ok,ok,ok,1.6,1.6,0,0,5,79,0,"[[45, 50]]",26.8,,147,142,142
+main,init17_rot,17,rot,False,False,True,True,True,True,save,save,save,save,0.8,0.8,0,0,4,100,0,"[[45, 49]]",23.9,,280,162,162
+main,init17_trans,17,trans,True,True,True,False,True,False,ok,break,ok,break,3.3,3.3,1,1,8,95,0,"[[49, 51], [146, 148], [150, 154]]",32.4,transport_drop,153,280,280
+stress_y,init17_trans_y,17,trans_y,False,False,True,False,True,False,save,fail,save,fail,2.2,2.1,1,0,17,141,0,"[[47, 54], [108, 114], [224, 224], [226, 226], [228, 228], [230, 234]]",20.7,transport_drop,280,280,280
+main,init18_orig,18,orig,True,True,True,True,True,True,ok,ok,ok,ok,3.9,3.9,0,0,7,79,0,"[[37, 44]]",25.4,,237,140,140
+main,init18_rot,18,rot,True,True,True,True,True,True,ok,ok,ok,ok,0.5,0.5,0,0,3,80,0,"[[40, 43]]",24.6,,142,135,135
+main,init18_trans,18,trans,True,True,True,True,True,True,ok,ok,ok,ok,2.5,2.5,1,1,5,111,0,"[[39, 44]]",27.6,,257,155,167
+stress_y,init18_trans_y,18,trans_y,True,True,True,False,True,False,ok,break,ok,break,2.3,2.2,0,0,21,187,0,"[[38, 59]]",20.0,transport_drop,166,280,280
+main,init19_orig,19,orig,True,True,True,True,True,True,ok,ok,ok,ok,0.6,0.6,0,0,0,84,0,[],23.3,,152,152,152
+main,init19_rot,19,rot,True,False,True,False,True,False,ok,fail,ok,fail,1.0,0.7,0,0,3,85,0,"[[52, 55]]",24.6,transport_drop,280,280,280
+main,init19_trans,19,trans,False,False,True,True,True,True,save,save,save,save,2.1,2.0,1,0,6,92,0,"[[56, 62]]",25.8,,280,169,171
+stress_y,init19_trans_y,19,trans_y,False,False,True,True,True,True,save,save,save,save,1.6,1.3,0,0,3,78,0,"[[54, 57]]",24.6,,280,160,150
+main,init20_orig,20,orig,True,True,True,True,True,True,ok,ok,ok,ok,1.7,1.6,0,0,4,92,0,"[[38, 42]]",26.3,,142,143,145
+main,init20_rot,20,rot,True,True,True,True,True,True,ok,ok,ok,ok,1.0,1.0,0,0,4,82,0,"[[40, 44]]",27.0,,159,135,135
+main,init20_trans,20,trans,True,True,True,True,True,True,ok,ok,ok,ok,0.7,0.7,0,0,6,85,0,"[[37, 43]]",29.0,,229,138,138
+stress_y,init20_trans_y,20,trans_y,True,True,True,True,True,True,ok,ok,ok,ok,2.5,2.4,0,1,12,75,0,"[[38, 50]]",21.4,,161,136,132
+main,init21_orig,21,orig,True,True,True,True,True,True,ok,ok,ok,ok,1.5,1.5,0,0,4,97,0,"[[42, 46]]",24.7,,145,160,160
+main,init21_rot,21,rot,False,False,True,False,True,False,save,fail,save,fail,2.7,1.8,1,0,4,89,0,"[[45, 48], [144, 145]]",23.0,transport_drop,280,280,280
+main,init21_trans,21,trans,False,False,True,True,True,False,save,save,save,fail,2.3,2.0,0,0,8,120,0,"[[43, 51]]",29.3,transport_drop,280,199,280
+stress_y,init21_trans_y,21,trans_y,False,False,True,False,True,False,save,fail,save,fail,2.1,2.1,1,1,8,144,0,"[[43, 51]]",21.7,transport_drop,280,280,280
+main,init22_orig,22,orig,True,True,False,False,True,True,break,break,ok,ok,0.9,2.0,0,1,3,91,0,"[[38, 41]]",25.8,,183,280,179
+main,init22_rot,22,rot,True,True,True,True,True,True,ok,ok,ok,ok,1.2,1.2,0,0,3,88,0,"[[38, 41]]",26.6,,140,144,144
+main,init22_trans,22,trans,True,True,True,True,True,True,ok,ok,ok,ok,1.6,1.6,1,1,5,101,0,"[[39, 44]]",28.5,,265,155,174
+stress_y,init22_trans_y,22,trans_y,True,True,True,True,True,True,ok,ok,ok,ok,1.8,1.8,0,0,6,83,0,"[[37, 43]]",17.9,,137,141,141
+main,init23_orig,23,orig,True,True,True,True,True,True,ok,ok,ok,ok,2.4,2.2,0,0,2,116,0,"[[43, 45]]",28.4,,160,248,257
+main,init23_rot,23,rot,True,True,True,True,True,True,ok,ok,ok,ok,1.7,1.7,0,0,0,86,0,[],25.0,,138,138,138
+main,init23_trans,23,trans,True,False,True,True,True,True,ok,save,ok,save,1.9,1.9,0,0,5,89,0,"[[39, 44]]",31.9,,280,144,144
+stress_y,init23_trans_y,23,trans_y,False,False,True,False,True,True,save,fail,save,save,2.7,2.7,1,0,5,89,0,"[[41, 44], [46, 48]]",26.5,,280,280,144
+main,init24_orig,24,orig,True,True,True,True,True,True,ok,ok,ok,ok,2.6,2.6,0,0,6,84,0,"[[44, 50], [53, 53]]",25.3,,182,161,152
+main,init24_rot,24,rot,True,True,True,True,True,True,ok,ok,ok,ok,0.7,0.7,0,0,4,79,0,"[[45, 49]]",26.8,,135,142,142
+main,init24_trans,24,trans,True,True,True,False,True,False,ok,break,ok,break,2.9,2.9,0,1,11,103,0,"[[48, 51], [53, 55], [58, 58], [159, 165]]",31.4,transport_drop,168,280,280
+stress_y,init24_trans_y,24,trans_y,False,False,True,False,False,False,save,fail,fail,fail,4.1,5.5,1,0,48,75,0,"[[44, 84], [87, 89], [183, 189]]",1.7,,280,280,280
+main,init25_orig,25,orig,True,True,True,True,True,True,ok,ok,ok,ok,1.5,1.5,1,1,3,89,0,"[[42, 45]]",25.8,,175,146,146
+main,init25_rot,25,rot,True,True,True,True,True,True,ok,ok,ok,ok,2.4,2.4,0,0,0,88,0,[],25.8,,141,141,141
+main,init25_trans,25,trans,True,True,True,False,True,True,ok,break,ok,ok,2.8,2.7,0,1,28,110,0,"[[45, 66], [69, 69], [71, 72], [74, 75], [77, 81], [83, 84], [86, 86]]",31.5,,150,280,205
+stress_y,init25_trans_y,25,trans_y,False,False,True,True,True,False,save,save,save,fail,2.6,2.4,0,1,8,79,0,"[[43, 51], [55, 55]]",21.4,transport_drop,280,149,280
+main,init26_orig,26,orig,True,True,True,True,True,True,ok,ok,ok,ok,1.5,1.2,1,0,6,79,0,"[[51, 57]]",30.0,,200,155,143
+main,init26_rot,26,rot,True,False,False,False,False,False,break,fail,break,fail,0.6,0.6,0,0,3,130,0,"[[48, 51]]",5.8,transport_drop,280,280,280
+main,init26_trans,26,trans,True,False,True,False,True,False,ok,fail,ok,fail,2.3,2.3,0,0,0,115,0,[],33.1,transport_drop,280,280,280
+stress_y,init26_trans_y,26,trans_y,False,False,True,True,True,True,save,save,save,save,2.2,1.7,0,0,27,118,0,"[[49, 69], [75, 75], [80, 80], [86, 86], [137, 144]]",24.7,,280,239,228
+main,init27_orig,27,orig,True,True,True,True,True,True,ok,ok,ok,ok,1.7,1.7,0,0,0,80,0,[],25.3,,141,141,141
+main,init27_rot,27,rot,True,True,True,True,True,True,ok,ok,ok,ok,1.3,1.3,0,0,2,91,0,"[[46, 48]]",28.5,,152,153,153
+main,init27_trans,27,trans,False,False,True,False,True,False,save,fail,save,fail,3.6,3.6,1,1,11,92,0,"[[51, 55], [57, 58], [150, 156]]",32.2,transport_drop,280,280,280
+stress_y,init27_trans_y,27,trans_y,False,False,True,False,False,False,save,fail,fail,fail,2.8,2.4,1,1,36,163,0,"[[47, 77], [79, 84], [86, 86], [90, 90], [93, 93], [234, 234], [259, 260]]",0.9,,280,280,280
+main,init28_orig,28,orig,True,True,True,True,True,True,ok,ok,ok,ok,1.2,1.2,0,0,0,87,0,[],24.8,,154,154,154
+main,init28_rot,28,rot,False,False,False,False,False,False,fail,fail,fail,fail,24.5,24.5,0,0,6,165,0,"[[54, 56], [149, 150], [152, 155]]",0.0,,280,280,280
+main,init28_trans,28,trans,False,False,True,True,True,True,save,save,save,save,1.9,1.9,1,1,6,89,0,"[[53, 59]]",25.8,,280,164,213
+stress_y,init28_trans_y,28,trans_y,True,True,True,True,True,True,ok,ok,ok,ok,1.8,1.8,0,0,0,77,0,[],20.2,,147,147,147
+main,init29_orig,29,orig,True,True,True,True,True,True,ok,ok,ok,ok,0.8,0.8,0,0,3,96,0,"[[58, 61]]",27.2,,154,174,174
+main,init29_rot,29,rot,False,False,False,False,False,False,fail,fail,fail,fail,24.8,24.8,0,0,1,159,0,"[[60, 61]]",0.3,,280,280,280
+main,init29_trans,29,trans,True,True,True,False,True,True,ok,break,ok,ok,2.6,2.4,0,0,5,90,0,"[[57, 62], [64, 64], [150, 150], [152, 152]]",24.1,,199,280,163
+stress_y,init29_trans_y,29,trans_y,False,False,True,True,True,True,save,save,save,save,3.8,3.6,0,0,14,99,0,"[[54, 66], [68, 70]]",23.9,,280,215,206

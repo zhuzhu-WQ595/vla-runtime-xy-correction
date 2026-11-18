@@ -1,0 +1,117 @@
+{
+ "pairs": 80,
+ "by_cond": {
+  "orig": {
+   "N": 20,
+   "v_g": 19,
+   "g_g": 20,
+   "g_res": 1,
+   "g_brk": 0,
+   "v_t": 19,
+   "g_t": 19,
+   "t_res": 1,
+   "t_brk": 1
+  },
+  "trans_x": {
+   "N": 20,
+   "v_g": 15,
+   "g_g": 18,
+   "g_res": 4,
+   "g_brk": 1,
+   "v_t": 13,
+   "g_t": 11,
+   "t_res": 2,
+   "t_brk": 4
+  },
+  "rot": {
+   "N": 20,
+   "v_g": 14,
+   "g_g": 18,
+   "g_res": 4,
+   "g_brk": 0,
+   "v_t": 13,
+   "g_t": 17,
+   "t_res": 4,
+   "t_brk": 0
+  },
+  "trans_y": {
+   "N": 20,
+   "v_g": 6,
+   "g_g": 17,
+   "g_res": 11,
+   "g_brk": 0,
+   "v_t": 5,
+   "g_t": 11,
+   "t_res": 8,
+   "t_brk": 2
+  }
+ },
+ "all": {
+  "N": 80,
+  "v_g": 54,
+  "g_g": 73,
+  "g_res": 20,
+  "g_brk": 1,
+  "v_t": 50,
+  "g_t": 58,
+  "t_res": 15,
+  "t_brk": 7
+ },
+ "both_grasp": {
+  "n": 53,
+  "v_task": 50,
+  "g_task": 44,
+  "drops": [
+   [
+    "init30_trans",
+    false,
+    false
+   ],
+   [
+    "init33_rot",
+    false,
+    false
+   ],
+   [
+    "init35_trans",
+    true,
+    false
+   ],
+   [
+    "init35_trans_y",
+    true,
+    false
+   ],
+   [
+    "init38_orig",
+    true,
+    false
+   ],
+   [
+    "init39_trans_y",
+    true,
+    false
+   ],
+   [
+    "init41_trans",
+    true,
+    false
+   ],
+   [
+    "init43_trans",
+    true,
+    false
+   ],
+   [
+    "init44_trans",
+    true,
+    false
+   ],
+   [
+    "init44_trans_y",
+    false,
+    true
+   ]
+  ]
+ }
+}

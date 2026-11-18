@@ -1,0 +1,307 @@
+{
+ "created": "2026-11-17",
+ "purpose": "3B 平移状态机制对照：类别固定XY vs 首有效视觉XY",
+ "rule": "fixlock = vislock 全部逻辑不变；首个非空估计锁定时 locked_est[:2] 替换为类固定点，z 保持该次估计",
+ "fixed_xy_m": {
+  "butter": [
+   -0.1064,
+   -0.2148
+  ],
+  "milk": [
+   -0.09335,
+   -0.21605
+  ]
+ },
+ "aggregation": "每类 = 开发集全部平移状态 meta.locked_est[:2] 的中位数（x,y 分别取中位）",
+ "provenance_dev_states": {
+  "butter": [
+   {
+    "tag": "f4b_init30_trans_pb_c0",
+    "locked_est": [
+     -0.0884,
+     -0.2386,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init30_trans_y_pb_c0",
+    "locked_est": [
+     -0.1298,
+     -0.1917,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init34_trans_pb_c0",
+    "locked_est": [
+     -0.0877,
+     -0.2425,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init34_trans_y_pb_c0",
+    "locked_est": [
+     -0.1237,
+     -0.1949,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init37_trans_pb_c0",
+    "locked_est": [
+     -0.0831,
+     -0.238,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init37_trans_y_pb_c0",
+    "locked_est": [
+     -0.1244,
+     -0.1911,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init40_trans_pb_c0",
+    "locked_est": [
+     -0.0831,
+     -0.238,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init40_trans_y_pb_c0",
+    "locked_est": [
+     -0.1244,
+     -0.1911,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init43_trans_pb_c0",
+    "locked_est": [
+     -0.0891,
+     -0.2347,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init43_trans_y_pb_c0",
+    "locked_est": [
+     -0.1305,
+     -0.1878,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init44_trans_pb_c0",
+    "locked_est": [
+     -0.0824,
+     -0.2419,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init44_trans_y_pb_c0",
+    "locked_est": [
+     -0.1237,
+     -0.1949,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init46_trans_pb_c0",
+    "locked_est": [
+     -0.0831,
+     -0.238,
+     0.0087
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4b_init46_trans_y_pb_c0",
+    "locked_est": [
+     -0.1244,
+     -0.1911,
+     0.0087
+    ],
+    "lock_step": 0
+   }
+  ],
+  "milk": [
+   {
+    "tag": "f4m_init00_trans_pb_c0",
+    "locked_est": [
+     -0.0624,
+     -0.2433,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init00_trans_y_pb_c0",
+    "locked_est": [
+     -0.116,
+     -0.196,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init01_trans_pb_c0",
+    "locked_est": [
+     -0.0624,
+     -0.2433,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init01_trans_y_pb_c0",
+    "locked_est": [
+     -0.1264,
+     -0.1979,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init04_trans_pb_c0",
+    "locked_est": [
+     -0.061,
+     -0.2342,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init04_trans_y_pb_c0",
+    "locked_est": [
+     -0.1146,
+     -0.1869,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init06_trans_pb_c0",
+    "locked_est": [
+     -0.0617,
+     -0.2388,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init06_trans_y_pb_c0",
+    "locked_est": [
+     -0.1153,
+     -0.1914,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init09_trans_pb_c0",
+    "locked_est": [
+     -0.061,
+     -0.2342,
+     0.0697
+    ],
+    "lock_step": 42
+   },
+   {
+    "tag": "f4m_init09_trans_y_pb_c0",
+    "locked_est": [
+     -0.1146,
+     -0.1869,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init12_trans_pb_c0",
+    "locked_est": [
+     -0.0721,
+     -0.2407,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init12_trans_y_pb_c0",
+    "locked_est": [
+     -0.1257,
+     -0.1934,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init15_trans_pb_c0",
+    "locked_est": [
+     -0.0721,
+     -0.2407,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init15_trans_y_pb_c0",
+    "locked_est": [
+     -0.1257,
+     -0.1934,
+     0.0697
+    ],
+    "lock_step": 0
+   },
+   {
+    "tag": "f4m_init17_trans_pb_c0",
+    "locked_est": [
+     -0.0617,
+     -0.2388,
+     0.0697
+    ],
+    "lock_step": 242
+   },
+   {
+    "tag": "f4m_init17_trans_y_pb_c0",
+    "locked_est": [
+     -0.1146,
+     -0.1869,
+     0.0697
+    ],
+    "lock_step": 0
+   }
+  ]
+ },
+ "paired_baseline": "fzb_init{30-49}_{trans,trans_y}_vislock.npz (40) + fzm_init{20-49}_{trans,trans_y}_vislock.npz (60)",
+ "near_coincident_threshold_m": 0.003,
+ "near_coincident_rule": "|state locked_xy − class fix_xy| ≤ 3mm 的状态单列——该处对照无区分能力",
+ "endpoints": [
+  "grasp_success",
+  "task_success"
+ ],
+ "grouping": "obj × cond(trans,trans_y)；init 簇 bootstrap 95%，seed 0，10000 次",
+ "no_equivalent_prior": "arm 列表 {vanilla,corr,gate,diag,branch,visgate,vislock,poseb} 无固定参考点臂；结果目录无 fix/const/ref 文件",
+ "code_hash": {
+  "run_correction_eval_before": "be68198d87df",
+  "run_correction_eval": "75f752637083",
+  "analyze_fixlock": "5d702c23ea1b",
+  "plot_fixlock_main": "4fd0e89f2286"
+ }
+}

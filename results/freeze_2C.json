@@ -1,0 +1,21 @@
+{
+ "stage": "2C",
+ "date": "2026-11-14",
+ "inherits": "results/freeze_2B.json —— 全部阈值/触发/参考点/限幅不变",
+ "delta": "新增 gate arm：闭合命令当步起屏蔽 action[:2] 覆盖（执行 raw_action）；持物期间持续屏蔽；夹爪重开解除屏蔽，是否再介入仍由原因果触发条件决定。corr 逻辑/参数零改动",
+ "gate_semantics": {
+  "mask_on": "本步 action[-1]>0（闭合命令）-> masked=True, active 立即结束",
+  "mask_off": "屏蔽后首个 action[-1]<0（重开命令）-> masked=False",
+  "reentry": "重开后由原触发条件(last_cmd_open AND z_gap∈[0,5.5cm] AND (descent|low) AND lat>2.5cm)决定",
+  "verification": "屏蔽期逐步 assert exec_action[:2]==raw_action[:2]，计 mask_mismatch"
+ },
+ "code_sha256": {
+  "scripts/run_correction_eval.py": "23116936f965aa34",
+  "scripts/run_perturb_eval.py": "58064a97c2d4e965"
+ },
+ "batch": {
+  "validation": "init11/12/22_orig + init02_trans (4 eps, episodes_gate_val.csv)",
+  "replay": "init10-29 × orig/trans/rot + trans_y = 80 eps -> episodes_gate.csv",
+  "held_out": "init30-49 留作独立确认"
+ }
+}

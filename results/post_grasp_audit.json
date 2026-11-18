@@ -1,0 +1,314 @@
+{
+ "init35_trans": {
+  "vanilla": {
+   "lift": "61",
+   "slip": null,
+   "drop": null,
+   "basket": "118",
+   "release": "128",
+   "hold_end": false,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 49,
+   "steps": 143,
+   "grasp": true,
+   "task": true,
+   "cls": "成功"
+  },
+  "gate": {
+   "lift": "61",
+   "slip": "140",
+   "drop": null,
+   "basket": null,
+   "release": "127",
+   "hold_end": true,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 47,
+   "steps": 280,
+   "grasp": true,
+   "task": false,
+   "cls": "证据不足"
+  },
+  "first_diff": {
+   "exec": 44,
+   "eef": 44,
+   "tgt": 56,
+   "corr_first": 44,
+   "gate_first": 46
+  }
+ },
+ "init35_trans_y": {
+  "vanilla": {
+   "lift": "143",
+   "slip": null,
+   "drop": null,
+   "basket": "194",
+   "release": "211",
+   "hold_end": false,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 50,
+   "steps": 217,
+   "grasp": true,
+   "task": true,
+   "cls": "成功"
+  },
+  "gate": {
+   "lift": "61",
+   "slip": "126",
+   "drop": null,
+   "basket": "113",
+   "release": "123",
+   "hold_end": true,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 48,
+   "steps": 280,
+   "grasp": true,
+   "task": false,
+   "cls": "放置失败"
+  },
+  "first_diff": {
+   "exec": 41,
+   "eef": 41,
+   "tgt": 44,
+   "corr_first": 41,
+   "gate_first": 47
+  }
+ },
+ "init38_orig": {
+  "vanilla": {
+   "lift": "69",
+   "slip": null,
+   "drop": null,
+   "basket": "120",
+   "release": "136",
+   "hold_end": true,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 2,
+   "steps": 151,
+   "grasp": true,
+   "task": true,
+   "cls": "成功"
+  },
+  "gate": {
+   "lift": "241",
+   "slip": null,
+   "drop": null,
+   "basket": null,
+   "release": null,
+   "hold_end": true,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 2,
+   "steps": 280,
+   "grasp": true,
+   "task": false,
+   "cls": "持物超时(未到篮)"
+  },
+  "first_diff": {
+   "exec": 50,
+   "eef": 51,
+   "tgt": 61,
+   "corr_first": 50,
+   "gate_first": 1
+  }
+ },
+ "init39_trans_y": {
+  "vanilla": {
+   "lift": "63",
+   "slip": "144",
+   "drop": null,
+   "basket": "112",
+   "release": "130",
+   "hold_end": true,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 54,
+   "steps": 149,
+   "grasp": true,
+   "task": true,
+   "cls": "成功"
+  },
+  "gate": {
+   "lift": "67",
+   "slip": "143",
+   "drop": null,
+   "basket": "122",
+   "release": "126",
+   "hold_end": true,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 57,
+   "steps": 280,
+   "grasp": true,
+   "task": false,
+   "cls": "放置失败"
+  },
+  "first_diff": {
+   "exec": 45,
+   "eef": 45,
+   "tgt": 50,
+   "corr_first": 45,
+   "gate_first": 56
+  }
+ },
+ "init41_trans": {
+  "vanilla": {
+   "lift": "65",
+   "slip": null,
+   "drop": null,
+   "basket": "157",
+   "release": "146",
+   "hold_end": true,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 51,
+   "steps": 161,
+   "grasp": true,
+   "task": true,
+   "cls": "成功"
+  },
+  "gate": {
+   "lift": "66",
+   "slip": "148",
+   "drop": null,
+   "basket": null,
+   "release": null,
+   "hold_end": false,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 50,
+   "steps": 280,
+   "grasp": true,
+   "task": false,
+   "cls": "证据不足"
+  },
+  "first_diff": {
+   "exec": 45,
+   "eef": 45,
+   "tgt": 51,
+   "corr_first": 45,
+   "gate_first": 49
+  }
+ },
+ "init43_trans": {
+  "vanilla": {
+   "lift": "78",
+   "slip": null,
+   "drop": null,
+   "basket": "140",
+   "release": "155",
+   "hold_end": false,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 62,
+   "steps": 166,
+   "grasp": true,
+   "task": true,
+   "cls": "成功"
+  },
+  "gate": {
+   "lift": "78",
+   "slip": "170",
+   "drop": null,
+   "basket": null,
+   "release": "163",
+   "hold_end": true,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 63,
+   "steps": 280,
+   "grasp": true,
+   "task": false,
+   "cls": "证据不足"
+  },
+  "first_diff": {
+   "exec": 59,
+   "eef": 60,
+   "tgt": 61,
+   "corr_first": 59,
+   "gate_first": 62
+  }
+ },
+ "init44_trans": {
+  "vanilla": {
+   "lift": "92",
+   "slip": "183",
+   "drop": null,
+   "basket": "160",
+   "release": "174",
+   "hold_end": true,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 62,
+   "steps": 188,
+   "grasp": true,
+   "task": true,
+   "cls": "成功"
+  },
+  "gate": {
+   "lift": "104",
+   "slip": "189",
+   "drop": null,
+   "basket": null,
+   "release": "184",
+   "hold_end": false,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 65,
+   "steps": 280,
+   "grasp": true,
+   "task": false,
+   "cls": "证据不足"
+  },
+  "first_diff": {
+   "exec": 56,
+   "eef": 56,
+   "tgt": 62,
+   "corr_first": 56,
+   "gate_first": 64
+  }
+ },
+ "init44_trans_y": {
+  "vanilla": {
+   "lift": "116",
+   "slip": "143",
+   "drop": null,
+   "basket": null,
+   "release": "139",
+   "hold_end": false,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 140,
+   "steps": 280,
+   "grasp": true,
+   "task": false,
+   "cls": "证据不足"
+  },
+  "gate": {
+   "lift": "93",
+   "slip": "164",
+   "drop": null,
+   "basket": "146",
+   "release": "158",
+   "hold_end": true,
+   "drop_basket_d": null,
+   "drop_travel": null,
+   "close_t": 80,
+   "steps": 171,
+   "grasp": true,
+   "task": true,
+   "cls": "成功"
+  },
+  "first_diff": {
+   "exec": 55,
+   "eef": 55,
+   "tgt": 59,
+   "corr_first": 55,
+   "gate_first": 79
+  }
+ }
+}

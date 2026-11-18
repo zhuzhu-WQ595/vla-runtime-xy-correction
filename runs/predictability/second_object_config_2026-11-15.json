@@ -1,0 +1,73 @@
+{
+  "name": "second_object_transfer",
+  "date": "2026-11-15",
+  "status": "frozen_before_runs",
+  "purpose": "在第二物体上配对比较原始 vanilla 与冻结 2C，检验纠偏/门控的可迁移性；本配置在查看任何纠偏效果前冻结。",
+
+  "candidate_tasks": {
+    "suite": "libero_object (10 tasks, 各 50 init)",
+    "rejected": {
+      "cream_cheese(1)": "扁盒，几何与 butter 最相似，区分度最低",
+      "alphabet_soup(0)/tomato_sauce(5)": "圆柱罐，绕竖直轴近对称，yaw 条件无意义",
+      "salad_dressing(2)/bbq_sauce(3)/ketchup(4)/orange_juice(9)": "瓶状，顶部颈部，顶抓面小且近似轴对称",
+      "chocolate_pudding(8)": "杯形，顶抓可行但近似轴对称且尺寸小"
+    },
+    "selected": "milk(task_id=7)"
+  },
+
+  "selection_rationale": [
+    "几何与 butter（扁宽盒 39x20mm 顶面）明显不同：milk 为竖高纸盒，顶面窄长，夹持点在侧面上部，顶抓姿态仍成立",
+    "非轴对称：矩形截面仅 180° 对称，+30° yaw 条件有意义（见 yaw_note）",
+    "同一 checkpoint：openvla/openvla-7b-finetuned-libero-object 覆盖全部 10 个 libero_object 任务",
+    "相同入篮判据：'pick up the milk and place it in the basket'，bddl 同场景同 basket_1 容器判据",
+    "obs/joint 命名同构：milk_1_pos/milk_1_quat、milk_1_joint0（free joint）、milk_1_main，runner 仅需换标识"
+  ],
+
+  "yaw_note": "milk 纸盒截面矩形，绕竖直轴 ~180° 对称（非连续对称）。+30° yaw 解释为'夹爪所对侧面方位改变'，而非新物体；不与平移条件等价。若后续发现 yaw 条件下两臂行为几乎不变，应归因于截面近对称而非条件失效。",
+
+  "task": {
+    "task_id": 7,
+    "target": "milk_1",
+    "target_joint": "milk_1_joint0",
+    "target_body": "milk_1_main",
+    "instruction": "pick up the milk and place it in the basket",
+    "checkpoint": "openvla/openvla-7b-finetuned-libero-object",
+    "task_suite": "libero_object",
+    "seed": 7,
+    "max_steps": 280,
+    "num_wait": 10,
+    "control": "20 Hz env.step，与 butter 同一 runner 同一控制回路",
+    "success_criteria": {
+      "grasp_success": "tgt_z 相对静置抬升 >=4cm 且保持 >=15 步（与 butter 相同 LIFT_H/LIFT_HOLD_STEPS）",
+      "task_success": "env done / In milk_1 basket_1_contain_region（bddl 判据，与 butter 同型）"
+    }
+  },
+
+  "frozen_policy_params": {
+    "note": "全部沿用 butter 冻结值；z_gap 定义为 eef_z - tgt_z（相对物体质心），构造上与物体绝对高度无关，预期无需因几何改动",
+    "Z_LO": 0.0, "Z_HI": 0.055, "Z_LOW_OK": 0.02,
+    "Z_HY_LO": -0.005, "Z_HY_HI": 0.075,
+    "DESC_NET": 0.002, "WIN": 4,
+    "R_ON": 0.025, "R_OFF": 0.015,
+    "K_CORR": 15.0, "C_CORR": 0.8,
+    "gate": "2C 闭合屏蔽 + 重开解除逻辑不变（arm=gate）",
+    "reference": "eef xy vs milk_1 中心 xy，与 butter 同款参考点"
+  },
+
+  "param_change_policy": "若某参数确因 milk 几何必须改变（如触发带覆盖率近零），原冻结版仍为主比较列，改动版单列标注，不回填解释。",
+
+  "conditions": {
+    "orig": "无扰动",
+    "trans": "+5 cm 世界 x（沿用 butter 命名 trans，即 trans_x）",
+    "trans_y": "+5 cm 世界 y",
+    "rot": "+30° 绕物体自身竖直轴 yaw"
+  },
+
+  "init_set": "init00-19（20 init × 4 条件 × {vanilla, gate} = 160 回合）",
+
+  "pre_registered_outputs": {
+    "endpoints": "稳定抓取 + 完整入篮",
+    "report": "按条件列 vanilla→2C 的救回/破坏/净差；以 init 为配对簇；触发覆盖率；两臂均抓起时的完成情况",
+    "files": "results/traj3_init{00..19}_{cond}_{vanilla,gate}.npz, results/episodes_milk_{vanilla,gate}.csv, videos2/milk_*"
+  }
+}

@@ -1,0 +1,101 @@
+{
+ "frozen": "2026-11-17",
+ "stage": "4C",
+ "selector": {
+  "rule": "pick px iff s*e > θe AND approach > θa else c0",
+  "s": -1,
+  "theta_e_mm": 2.0,
+  "theta_a_mm": 0.0,
+  "meaning": "e=(locked_est_xy−finger_mid_xy)·u；approach=(fm(t0)−fm(t0−5))·u（K=5 控制步）",
+  "u": "normalize(geom_xpos[finger1_pad]−geom_xpos[finger2_pad])[:2]，geom 名 gripper0_finger{1,2}_pad_collision；u 在决策步计算",
+  "e": "锁定视觉目标(vislock locked_est) xy 相对夹爪中点的闭合轴有符号误差",
+  "no_trigger": "无 cand_step（未锁定/未接近/已闭合）→ c0 回退",
+  "decision_step": "同四 A：首个 已锁定∧未闭合∧3D|eef−锁定目标|<70mm 步",
+  "window": "pick=px 时偏置自决策步持续至首次闭合+2 或 30 步；px=u*0.039 raw/步加 action[:2]"
+ },
+ "dev_states": {
+  "butter": [
+   "init30_trans",
+   "init30_trans_y",
+   "init34_trans",
+   "init34_trans_y",
+   "init37_trans",
+   "init37_trans_y",
+   "init40_trans",
+   "init40_trans_y",
+   "init43_trans",
+   "init43_trans_y",
+   "init44_trans",
+   "init44_trans_y",
+   "init46_trans",
+   "init46_trans_y"
+  ],
+  "milk": [
+   "init00_trans",
+   "init00_trans_y",
+   "init01_trans",
+   "init01_trans_y",
+   "init04_trans",
+   "init04_trans_y",
+   "init06_trans",
+   "init06_trans_y",
+   "init09_trans",
+   "init09_trans_y",
+   "init12_trans",
+   "init12_trans_y",
+   "init15_trans",
+   "init15_trans_y",
+   "init17_trans",
+   "init17_trans_y"
+  ]
+ },
+ "tie_break": "max g successes → fewer px picks → θa=-inf(更简单)",
+ "code_hash": {
+  "run_correction_eval": "be68198d87df",
+  "analyze_action_select": "25ecb59d0490",
+  "freeze_selector": "7e26bb52d386",
+  "analyze_selector_confirm": "5db4dfe0b44d"
+ },
+ "selection_basis": "全部 30 开发状态、仅抓取主终点",
+ "confirmation_states": {
+  "rule": "未参与四 A 候选选择/修订、四 B 阈值/CV 的 init；butter/milk 各 8 init ×{trans,trans_y}；不按既有成败筛",
+  "butter": [
+   "init31_trans",
+   "init31_trans_y",
+   "init33_trans",
+   "init33_trans_y",
+   "init36_trans",
+   "init36_trans_y",
+   "init39_trans",
+   "init39_trans_y",
+   "init42_trans",
+   "init42_trans_y",
+   "init45_trans",
+   "init45_trans_y",
+   "init48_trans",
+   "init48_trans_y",
+   "init49_trans",
+   "init49_trans_y"
+  ],
+  "milk": [
+   "init02_trans",
+   "init02_trans_y",
+   "init05_trans",
+   "init05_trans_y",
+   "init08_trans",
+   "init08_trans_y",
+   "init11_trans",
+   "init11_trans_y",
+   "init14_trans",
+   "init14_trans_y",
+   "init16_trans",
+   "init16_trans_y",
+   "init18_trans",
+   "init18_trans_y",
+   "init19_trans",
+   "init19_trans_y"
+  ],
+  "note": "其中若干 init 在阶段三 B/C 批次下跑过其他臂；本次用途仅为验证动作选择规则，标注为 reused_for=action_selector_validation",
+  "arms": "每状态跑 poseb c0 / px / sel 三臂成对"
+ }
+}

@@ -1,0 +1,13 @@
+# 复现环境（与原 openvla conda 环境对应；版本按原环境实测可用为准）
+numpy
+opencv-python          # 模板匹配 cv2.matchTemplate
+imageio                # mp4 写视频
+matplotlib             # 主图
+torch                  # OpenVLA 推理（需 GPU + bitsandbytes 4-bit）
+transformers
+bitsandbytes
+libero                 # git+https://github.com/Lifelong-Robot-Learning/LIBERO
+robosuite              # 由 LIBERO 依赖带入
+# OpenVLA 本体: git clone https://github.com/openvla/openvla
+# 设置 OPENVLA_DIR=/path/to/openvla 或将本仓库克隆到其同级目录
+# 检查点 openvla/openvla-7b-finetuned-libero-object 由 transformers 自动下载（HF）

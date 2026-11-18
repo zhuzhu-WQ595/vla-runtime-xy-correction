@@ -1,0 +1,209 @@
+{
+ "frozen_at": "2026-11-16T19:20:29",
+ "stage": "3B frozen visual transfer",
+ "sets": {
+  "butter": {
+   "task_id": 6,
+   "out_prefix": "fzb",
+   "vid_prefix": "fzb_",
+   "inits": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+   ],
+   "label": "新位置验证（基底 init30-49 的机器人/场景配置；目标 XY 由 butter_newpos.json 覆盖，均距 50 个原 init 位置 >=1.5cm）",
+   "pos_override": "runs/predictability/butter_newpos.json",
+   "positions": {
+    "30": [
+     -0.15349,
+     -0.24899
+    ],
+    "31": [
+     -0.13218,
+     -0.28066
+    ],
+    "32": [
+     -0.08177,
+     -0.26755
+    ],
+    "33": [
+     -0.15986,
+     -0.28163
+    ],
+    "34": [
+     -0.15108,
+     -0.20576
+    ],
+    "35": [
+     -0.07808,
+     -0.18938
+    ],
+    "36": [
+     -0.0684,
+     -0.24802
+    ],
+    "37": [
+     -0.07607,
+     -0.22631
+    ],
+    "38": [
+     -0.10867,
+     -0.20186
+    ],
+    "39": [
+     -0.07111,
+     -0.28727
+    ],
+    "40": [
+     -0.13152,
+     -0.19718
+    ],
+    "41": [
+     -0.11487,
+     -0.29129
+    ],
+    "42": [
+     -0.16367,
+     -0.22409
+    ],
+    "43": [
+     -0.10238,
+     -0.23387
+    ],
+    "44": [
+     -0.17007,
+     -0.19227
+    ],
+    "45": [
+     -0.1296,
+     -0.22043
+    ],
+    "46": [
+     -0.09177,
+     -0.29185
+    ],
+    "47": [
+     -0.11409,
+     -0.26579
+    ],
+    "48": [
+     -0.17458,
+     -0.26204
+    ],
+    "49": [
+     -0.09346,
+     -0.21507
+    ]
+   }
+  },
+  "milk": {
+   "task_id": 7,
+   "out_prefix": "fzm",
+   "vid_prefix": "fzm_",
+   "inits": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+   ],
+   "label": "新 init 状态（init20-49 未用于标定/模板/z_prior/规则调整；注意：各 init 的物体 XY 分布与标定集 init00-19 在约 1cm 内重叠）",
+   "pos_override": null
+  }
+ },
+ "arms": [
+  "vanilla",
+  "gate",
+  "visgate"
+ ],
+ "arm_roles": {
+  "vanilla": "无纠偏基线",
+  "gate": "oracle-2C（仿真真值目标）",
+  "visgate": "visual-2C（冻结 RGB 估计器）"
+ },
+ "conditions": [
+  "orig",
+  "trans",
+  "trans_y"
+ ],
+ "condition_defs": {
+  "orig": "无扰动",
+  "trans": "目标 +5cm x（apply_perturb 阶段一定义）",
+  "trans_y": "目标 +5cm y"
+ },
+ "primary_comparison": "visgate vs vanilla，按同一 (init, cond) 状态配对",
+ "secondary_comparison": "visgate vs gate（视觉定位带来的差距）；oracle 救回保留率",
+ "endpoints": {
+  "primary": "stable grasp（runner grasp_success）",
+  "secondary": "完整入篮（runner task_success）"
+ },
+ "analysis": {
+  "pairing": "同一 (init, cond) 三臂配对",
+  "ci": "以 init 为簇的 bootstrap 95% 区间，2000 次，seed 0",
+  "denominators": "救回分母=vanilla 失败；破坏分母=vanilla 成功",
+  "oracle_retention": "gate 救回（vanilla 失败且 gate 成功）中 visgate 也成功的比例",
+  "report_by": [
+   "object",
+   "condition",
+   "endpoint"
+  ],
+  "rules": [
+   "冻结后不改估计器/资产/2C 参数/阈值",
+   "仅在程序崩溃时重跑该回合，并记录",
+   "不剔除任何回合"
+  ]
+ },
+ "file_sha256": {
+  "scripts/run_correction_eval.py": "3218cf11501bb7e22ee06b448841c2952b1621726a55a91313dd92c22ca0a1ab",
+  "scripts/run_perturb_eval.py": "7fbbd890b7ed8c0107a4487ff9d3d135db203083235cada8c3dc8db7f933e873",
+  "scripts/vision_target.py": "a9ce8d9a1bf0c1db69c03fd02161c8f0f8ed2742060e074cc7adc1278b64e270",
+  "runs/predictability/pix2w_butter.json": "d14beef0ee4b9221cc6b2388c54219f4294e8e8705dc8dceecae640b8e3dc685",
+  "runs/predictability/pix2w_milk.json": "d9534e2c28eb8a80470913febc5d3076d2e5d28c8315a3a4d5611f57cbeca167",
+  "runs/predictability/tmpl_butter.png": "cb61b6dd057bc12a4c9535f4f2d813589d4ceab86b94b3962c4f9b8a978dbaab",
+  "runs/predictability/tmpl_milk.png": "d21b83b1111fc3e011b1b7bae18884affc13d19811fb2f3fb7cbbe792df21ab8",
+  "runs/predictability/perception_config_2026-11-16.json": "44f6e44907033754d8de025d092e839e736f2853c86b749da41cbc59aab5b45b",
+  "runs/predictability/butter_newpos.json": "84728133cd4090550a556b8400740f8897aef717db90e0956c10a6a6176285fc"
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "stage": "3C",
+ "purpose": "机制对照：逐帧更新目标位置(visual-2C/visgate) 对 初始锁定目标(visual_initial_lock/vislock) 的增量价值",
+ "frozen_at": "2026-11-17（早于任何 vislock 结局产生）",
+ "arm": {
+  "name": "vislock",
+  "label": "visual_initial_lock",
+  "estimator": "与 visgate 完全相同的 TargetEstimator：agentview 相机、tmpl_{cls}.png 模板、pix2w_{cls}.json 仿射、类 z_prior、score_min=0.55、topK=4、WORKSPACE_RECT、LAST_HOLD=5（资产 hash 见 frozen_visual_transfer_2026-11-16.json）",
+  "lock_rule": "回合内首次从观测获得非空 fresh 估计即锁定该世界坐标，整回合固定喂给 CorrState；",
+  "lock_acquisition": [
+   "t=0（NUM_WAIT 静置后、策略首个动作执行前的初始观测，与 visgate 首帧完全相同）调 est.estimate；非空 → lock_step=0，锁定 e_est",
+   "若 t=0 miss：继续逐步调 estimate（与 visgate 相同输入），首个非空估计即锁定（lock_step=t）；此为初始漏检延迟锁定，病例保留并在逐状态表标记",
+   "注：锁定前不可能出现 held 估计（held 需要先有一次 fresh），故首个非空返回即首个 fresh"
+  ],
+  "initial_miss_fallback": "整回合始终无非空估计 → 无锁定；逐步行为与 visgate miss 路径一致（喂 EEF 位置），meta 记 lock_step=null，病例保留不剔除",
+  "post_lock": "锁定后每步喂 CorrState 的 t_xy/t_z 恒为锁定值；估计器仍逐帧运行仅作诊断日志（est_live/vis_score），不影响任何输入",
+  "unchanged": "CorrState 触发阈值、闭合屏蔽、重开、alpha/控制参数与 visgate 完全一致；策略、种子、NUM_WAIT、初始化与扰动管线不变"
+ },
+ "states": "复用三 B 冻结集：butter init30-49 + butter_newpos.json 覆盖（60 状态）、milk init20-49（90 状态）；conds orig,trans,trans_y",
+ "comparison": {
+  "primary": "visgate − vislock，按同一 (init,cond) 状态配对；主分析=butter/milk 各自 trans+trans_y；orig 单列",
+  "endpoints": "稳定抓取(主)、完整入篮(次)",
+  "ci": "init 簇 bootstrap 95%，2000 次 seed 0（同 analyze_frozen_transfer）",
+  "labels": "已分析状态上的机制对照（非新状态验证）"
+ },
+ "diagnosis": {
+  "scope": "结局翻转（visgate 与 vislock 抓取或入篮结果不同）的病例",
+  "method": "离线用仿真真值 tgt_pos 仅作诊断；比较 lock 值、est_live 逐帧值与物体实际轨迹",
+  "classes": [
+   "tracked：物体确实移动（max|tgt_xy(t)-tgt_xy(0)|>5mm）且逐帧估计跟随（est_live 与真值同步变化）→ 逐帧更新有实益",
+   "drift：物体近似静止（≤5mm）但逐帧估计漂移（est_live 相对 lock 变化>5mm 且真值不变）→ 逐帧更新引入噪声",
+   "corrected：初始锁定估计误差大（|lock-gt|>8mm）而后续 est_live 误差显著减小 → 初始有偏、后续观测可修正",
+   "undetermined：证据不足或多因混合"
+  ]
+ },
+ "deliverables": ["results/online_vs_lock_{butter,milk}.csv", "results/online_vs_lock_summary.json", "ONLINE_VS_INITIAL_TARGET.md"]
+}

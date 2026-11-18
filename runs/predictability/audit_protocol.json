@@ -1,0 +1,32 @@
+{
+  "purpose": "等预算与机制归因复核（离线，仅用现有 branch80.csv / predictability_eval.csv / 成对分支 npz）",
+  "written_before_analysis": "2026-11-15，写于计算任何等预算/C_nom/实测改善指标之前",
+  "sealed": "init30-49 不读取、不运行",
+  "budget_targets_rate_of_triggered": [0.20, 0.30, 0.40, 0.50],
+  "budget_calibration": {
+    "where": "每折仅在训练折触发状态上校准；留出折只应用、只计数",
+    "target_count": "k* = round(rate * n_train_triggered)",
+    "score_rules": "C_fit / C_nom：tug iff s > q；q 取训练分数断点；若训练计数不能等于 k*，报告下侧(最大计数<=k*)与上侧(最小计数>=k*)两个可实现预算",
+    "B1": "θ_B2、θ_B3 固定为原流程该折选出的值，仅扫 θ_B1（|e_S| 断点）；超出门槛上限时报告最邻近可实现预算",
+    "Bstar": "B 全网格；取训练计数最邻近 k* 的下/上侧组合，同计数内按训练折 (rescue-break) 最大、再按网格顺序；仅用训练折结局",
+    "no_test_outcomes": true
+  },
+  "C_nom": {
+    "M": "0.0128 * I (m / raw 单位)，b = 0",
+    "source": "run_correction_eval.py corr_integral 与 RECOVERABILITY_REPORT 记录的映射",
+    "otherwise_identical_to_C": "同一可行区、同一残差、同一 eef 基点、同一盒系、同一阈值族与选择流程"
+  },
+  "feasible_region_body_frame": {
+    "as_implemented": "|e·body_y| <= 20 mm 且 |e·body_x| <= 10 mm（代码中分别命名为 L、S）",
+    "resid": "到该矩形的欧氏距离"
+  },
+  "item4": {
+    "point": "指垫中点 fmid（新回合实测 geom_xpos 均值；6 个旧回合用 eef - s*Y_world 重建，s=(q0+q1)/2，并标记）",
+    "frame": "物体系：预测用决策前（索引 t*-2）物体位姿；实测用各分支自身索引 t*-1（t* 执行后）物体位姿",
+    "pred_improvement": "resid(e_ip + M raw + b) - resid(e_ip + M prop + b)",
+    "meas_improvement": "resid(e_a0[t*-1]) - resid(e_a1[t*-1])",
+    "near_zero_mm": 0.5,
+    "gate_mm": 2.0
+  },
+  "tie_break_fix": "原流程目标不变 max(rescue-break)，平局取干预更少者，再按网格顺序"
+}

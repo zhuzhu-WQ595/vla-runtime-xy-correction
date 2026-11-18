@@ -1,0 +1,1479 @@
+{
+ "p1": {
+  "g": {
+   "butter": {
+    "c0": 10,
+    "px": 9,
+    "nx": 9,
+    "ry": 3,
+    "ly": 4
+   },
+   "milk": {
+    "c0": 7,
+    "px": 11,
+    "nx": 9,
+    "ry": 10,
+    "ly": 5
+   },
+   "all": {
+    "c0": 17,
+    "px": 20,
+    "nx": 18,
+    "ry": 13,
+    "ly": 9
+   },
+   "c0_px": {
+    "butter": 12,
+    "milk": 11,
+    "all": 23
+   },
+   "c0_px_ry": {
+    "butter": 14,
+    "milk": 13,
+    "all": 27
+   },
+   "all5": {
+    "butter": 14,
+    "milk": 13,
+    "all": 27
+   }
+  },
+  "t": {
+   "butter": {
+    "c0": 9,
+    "px": 8,
+    "nx": 8,
+    "ry": 2,
+    "ly": 4
+   },
+   "milk": {
+    "c0": 5,
+    "px": 7,
+    "nx": 7,
+    "ry": 5,
+    "ly": 3
+   },
+   "all": {
+    "c0": 14,
+    "px": 15,
+    "nx": 15,
+    "ry": 7,
+    "ly": 7
+   },
+   "c0_px": {
+    "butter": 11,
+    "milk": 7,
+    "all": 18
+   },
+   "c0_px_ry": {
+    "butter": 13,
+    "milk": 8,
+    "all": 21
+   },
+   "all5": {
+    "butter": 13,
+    "milk": 8,
+    "all": 21
+   }
+  },
+  "audit": {
+   "n_pairs": 120,
+   "n_ok": 120,
+   "n_identical": 4,
+   "bad": [],
+   "note": "原报告 60/60 分母=30状态×{px,nx}两候选；本次 120=30×4，含无触发等价对"
+  }
+ },
+ "pair_labels": {
+  "g": {
+   "px_saves": [
+    "init34_trans",
+    "init37_trans",
+    "init06_trans_y",
+    "init09_trans_y",
+    "init12_trans",
+    "init17_trans_y"
+   ],
+   "px_breaks": [
+    "init37_trans_y",
+    "init40_trans_y",
+    "init46_trans_y"
+   ],
+   "both_ok": [
+    "init30_trans",
+    "init30_trans_y",
+    "init40_trans",
+    "init43_trans",
+    "init44_trans",
+    "init44_trans_y",
+    "init46_trans",
+    "init00_trans_y",
+    "init01_trans",
+    "init01_trans_y",
+    "init06_trans",
+    "init12_trans_y",
+    "init15_trans",
+    "init15_trans_y"
+   ],
+   "both_fail": [
+    "init34_trans_y",
+    "init43_trans_y",
+    "init00_trans",
+    "init04_trans",
+    "init04_trans_y",
+    "init09_trans",
+    "init17_trans"
+   ]
+  },
+  "t": {
+   "px_saves": [
+    "init34_trans",
+    "init37_trans",
+    "init01_trans",
+    "init12_trans"
+   ],
+   "px_breaks": [
+    "init37_trans_y",
+    "init40_trans_y",
+    "init44_trans_y"
+   ],
+   "both_ok": [
+    "init30_trans",
+    "init30_trans_y",
+    "init40_trans",
+    "init43_trans",
+    "init44_trans",
+    "init46_trans",
+    "init00_trans_y",
+    "init01_trans_y",
+    "init06_trans",
+    "init15_trans",
+    "init15_trans_y"
+   ],
+   "both_fail": [
+    "init34_trans_y",
+    "init43_trans_y",
+    "init46_trans_y",
+    "init00_trans",
+    "init04_trans",
+    "init04_trans_y",
+    "init06_trans_y",
+    "init09_trans",
+    "init09_trans_y",
+    "init12_trans_y",
+    "init17_trans",
+    "init17_trans_y"
+   ]
+  }
+ },
+ "cv": [
+  {
+   "endpoint": "g",
+   "n": 30,
+   "totals": {
+    "rule": 21,
+    "c0": 17,
+    "global_fixed": 20,
+    "per_object": 21
+   },
+   "saves_vs_c0": [
+    "init34_trans",
+    "init37_trans",
+    "init09_trans_y",
+    "init12_trans"
+   ],
+   "breaks_vs_c0": [],
+   "rule_neq_gf": [
+    "init37_trans_y",
+    "init40_trans_y",
+    "init46_trans_y",
+    "init06_trans_y",
+    "init17_trans_y"
+   ],
+   "rule_neq_po": [
+    "init34_trans",
+    "init37_trans",
+    "init06_trans_y",
+    "init17_trans_y"
+   ],
+   "effective_divergence": [
+    "init34_trans",
+    "init37_trans",
+    "init09_trans_y",
+    "init12_trans"
+   ]
+  },
+  {
+   "endpoint": "t",
+   "n": 30,
+   "totals": {
+    "rule": 18,
+    "c0": 14,
+    "global_fixed": 12,
+    "per_object": 16
+   },
+   "saves_vs_c0": [
+    "init34_trans",
+    "init37_trans",
+    "init01_trans",
+    "init12_trans"
+   ],
+   "breaks_vs_c0": [],
+   "rule_neq_gf": [
+    "init34_trans",
+    "init37_trans_y",
+    "init40_trans_y",
+    "init44_trans_y",
+    "init01_trans",
+    "init12_trans"
+   ],
+   "rule_neq_po": [
+    "init34_trans",
+    "init37_trans"
+   ],
+   "effective_divergence": [
+    "init34_trans",
+    "init37_trans",
+    "init01_trans",
+    "init12_trans"
+   ]
+  }
+ ],
+ "cv_rows": [
+  {
+   "obj": "butter",
+   "tag": "init30_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -2.1,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init30_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -22.1,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init30_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -2.1,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init30_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -22.1,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init34_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -2.8,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 0,
+   "label": "px_saves"
+  },
+  {
+   "obj": "butter",
+   "tag": "init34_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -23.5,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "butter",
+   "tag": "init34_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -2.8,
+   "c0": 0,
+   "global_fixed": "c0",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 0,
+   "label": "px_saves"
+  },
+  {
+   "obj": "butter",
+   "tag": "init34_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -23.5,
+   "c0": 0,
+   "global_fixed": "c0",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "butter",
+   "tag": "init37_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -3.8,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 0,
+   "label": "px_saves"
+  },
+  {
+   "obj": "butter",
+   "tag": "init37_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": -28.4,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "px_breaks"
+  },
+  {
+   "obj": "butter",
+   "tag": "init37_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -3.8,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 0,
+   "label": "px_saves"
+  },
+  {
+   "obj": "butter",
+   "tag": "init37_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": -28.4,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "px_breaks"
+  },
+  {
+   "obj": "butter",
+   "tag": "init40_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": 9.9,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init40_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": -36.2,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "px_breaks"
+  },
+  {
+   "obj": "butter",
+   "tag": "init40_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": 9.9,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init40_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": -36.2,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "px_breaks"
+  },
+  {
+   "obj": "butter",
+   "tag": "init43_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -4.4,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init43_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -19.9,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "butter",
+   "tag": "init43_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -4.4,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init43_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 0,
+   "e_at_dec_mm": -19.9,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "butter",
+   "tag": "init44_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": 6.1,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init44_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -24.0,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init44_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": 6.1,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init44_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": -24.0,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "px_breaks"
+  },
+  {
+   "obj": "butter",
+   "tag": "init46_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": 1.2,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init46_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": -33.1,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "px_breaks"
+  },
+  {
+   "obj": "butter",
+   "tag": "init46_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": 1.2,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "c0",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "butter",
+   "tag": "init46_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 0,
+   "e_at_dec_mm": -33.1,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "c0",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init00_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -9.5,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init00_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -13.2,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init00_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -9.5,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init00_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -13.2,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init01_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=0mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -1.7,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init01_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=0mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -3.3,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init01_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -1.7,
+   "c0": 0,
+   "global_fixed": "c0",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "px_saves"
+  },
+  {
+   "obj": "milk",
+   "tag": "init01_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": -3.3,
+   "c0": 1,
+   "global_fixed": "c0",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init04_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -24.2,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init04_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "c0",
+   "rule_out": 0,
+   "e_at_dec_mm": -51.4,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init04_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -24.2,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init04_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 0,
+   "e_at_dec_mm": -51.4,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init06_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": -3.0,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init06_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 0,
+   "e_at_dec_mm": -41.0,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "px_saves"
+  },
+  {
+   "obj": "milk",
+   "tag": "init06_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": -3.0,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init06_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 0,
+   "e_at_dec_mm": -41.0,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init09_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "c0",
+   "rule_out": 0,
+   "e_at_dec_mm": null,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init09_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -17.6,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "px_saves"
+  },
+  {
+   "obj": "milk",
+   "tag": "init09_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 0,
+   "e_at_dec_mm": null,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init09_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -17.6,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init12_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -2.4,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "px_saves"
+  },
+  {
+   "obj": "milk",
+   "tag": "init12_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -23.8,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init12_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -2.4,
+   "c0": 0,
+   "global_fixed": "c0",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "px_saves"
+  },
+  {
+   "obj": "milk",
+   "tag": "init12_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -23.8,
+   "c0": 0,
+   "global_fixed": "c0",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init15_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -9.5,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init15_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": 0.1,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init15_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 1,
+   "e_at_dec_mm": -9.5,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init15_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 1,
+   "e_at_dec_mm": 0.1,
+   "c0": 1,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "both_ok"
+  },
+  {
+   "obj": "milk",
+   "tag": "init17_trans",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -15.9,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init17_trans_y",
+   "endpoint": "g",
+   "rule": "s=-1,te=2mm,ta=-10mm",
+   "rule_pick": "c0",
+   "rule_out": 0,
+   "e_at_dec_mm": -30.3,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 1,
+   "per_object": "px",
+   "po_out": 1,
+   "label": "px_saves"
+  },
+  {
+   "obj": "milk",
+   "tag": "init17_trans",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "px",
+   "rule_out": 0,
+   "e_at_dec_mm": -15.9,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  },
+  {
+   "obj": "milk",
+   "tag": "init17_trans_y",
+   "endpoint": "t",
+   "rule": "s=-1,te=0mm,ta=0mm",
+   "rule_pick": "c0",
+   "rule_out": 0,
+   "e_at_dec_mm": -30.3,
+   "c0": 0,
+   "global_fixed": "px",
+   "gf_out": 0,
+   "per_object": "px",
+   "po_out": 0,
+   "label": "both_fail"
+  }
+ ],
+ "ry": {
+  "new_over_c0px": [
+   "init34_trans_y",
+   "init43_trans_y",
+   "init00_trans",
+   "init17_trans"
+  ],
+  "breaks": [
+   "init30_trans",
+   "init30_trans_y",
+   "init37_trans_y",
+   "init40_trans",
+   "init43_trans",
+   "init44_trans",
+   "init44_trans_y",
+   "init46_trans",
+   "init46_trans_y",
+   "init12_trans_y"
+  ],
+  "feat": {
+   "g": {
+    "new": [
+     {
+      "e_at_dec_mm": -23.5,
+      "approach_mm": 1.1,
+      "e_gt_mm": -24.9
+     },
+     {
+      "e_at_dec_mm": -19.9,
+      "approach_mm": -7.5,
+      "e_gt_mm": -22.8
+     },
+     {
+      "e_at_dec_mm": -9.5,
+      "approach_mm": 13.6,
+      "e_gt_mm": -7.9
+     },
+     {
+      "e_at_dec_mm": -15.9,
+      "approach_mm": 14.1,
+      "e_gt_mm": -6.3
+     }
+    ],
+    "brk": [
+     {
+      "e_at_dec_mm": -2.1,
+      "approach_mm": 8.3,
+      "e_gt_mm": -0.3
+     },
+     {
+      "e_at_dec_mm": -22.1,
+      "approach_mm": 1.1,
+      "e_gt_mm": -22.3
+     },
+     {
+      "e_at_dec_mm": -28.4,
+      "approach_mm": -11.1,
+      "e_gt_mm": -30.5
+     },
+     {
+      "e_at_dec_mm": 9.9,
+      "approach_mm": 0.4,
+      "e_gt_mm": 9.2
+     },
+     {
+      "e_at_dec_mm": -4.4,
+      "approach_mm": 3.6,
+      "e_gt_mm": -6.2
+     },
+     {
+      "e_at_dec_mm": 6.1,
+      "approach_mm": 2.2,
+      "e_gt_mm": 4.6
+     },
+     {
+      "e_at_dec_mm": -24.0,
+      "approach_mm": -7.0,
+      "e_gt_mm": -26.9
+     },
+     {
+      "e_at_dec_mm": 1.2,
+      "approach_mm": 3.5,
+      "e_gt_mm": 1.5
+     },
+     {
+      "e_at_dec_mm": -33.1,
+      "approach_mm": -14.4,
+      "e_gt_mm": -35.4
+     },
+     {
+      "e_at_dec_mm": -23.8,
+      "approach_mm": 0.8,
+      "e_gt_mm": -27.6
+     }
+    ]
+   }
+  },
+  "delta3": [
+   {
+    "tag": "init30_trans",
+    "pre": -15.3,
+    "at": -16.7,
+    "post": -19.0,
+    "new_cover": false,
+    "broken": true
+   },
+   {
+    "tag": "init30_trans_y",
+    "pre": -18.5,
+    "at": -20.2,
+    "post": -22.4,
+    "new_cover": false,
+    "broken": true
+   },
+   {
+    "tag": "init34_trans",
+    "pre": -10.3,
+    "at": -11.3,
+    "post": -13.5,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init34_trans_y",
+    "pre": -10.1,
+    "at": -11.1,
+    "post": -12.9,
+    "new_cover": true,
+    "broken": false
+   },
+   {
+    "tag": "init37_trans",
+    "pre": -15.9,
+    "at": -16.9,
+    "post": -19.3,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init37_trans_y",
+    "pre": -11.5,
+    "at": -11.2,
+    "post": -10.4,
+    "new_cover": false,
+    "broken": true
+   },
+   {
+    "tag": "init40_trans",
+    "pre": -13.1,
+    "at": -14.6,
+    "post": -17.0,
+    "new_cover": false,
+    "broken": true
+   },
+   {
+    "tag": "init40_trans_y",
+    "pre": -0.8,
+    "at": -0.1,
+    "post": 0.8,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init43_trans",
+    "pre": -14.3,
+    "at": -15.5,
+    "post": -17.6,
+    "new_cover": false,
+    "broken": true
+   },
+   {
+    "tag": "init43_trans_y",
+    "pre": -12.4,
+    "at": -13.4,
+    "post": -15.1,
+    "new_cover": true,
+    "broken": false
+   },
+   {
+    "tag": "init44_trans",
+    "pre": -13.4,
+    "at": -14.8,
+    "post": -16.3,
+    "new_cover": false,
+    "broken": true
+   },
+   {
+    "tag": "init46_trans",
+    "pre": -10.2,
+    "at": -11.4,
+    "post": -13.5,
+    "new_cover": false,
+    "broken": true
+   },
+   {
+    "tag": "init46_trans_y",
+    "pre": -10.3,
+    "at": -9.9,
+    "post": -9.5,
+    "new_cover": false,
+    "broken": true
+   },
+   {
+    "tag": "init00_trans",
+    "pre": -11.9,
+    "at": -13.6,
+    "post": -15.9,
+    "new_cover": true,
+    "broken": false
+   },
+   {
+    "tag": "init00_trans_y",
+    "pre": -6.8,
+    "at": -8.0,
+    "post": -10.1,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init01_trans",
+    "pre": -3.1,
+    "at": -4.7,
+    "post": -6.2,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init01_trans_y",
+    "pre": -4.2,
+    "at": -5.5,
+    "post": -7.7,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init04_trans",
+    "pre": -13.8,
+    "at": -15.2,
+    "post": -17.3,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init04_trans_y",
+    "pre": -12.7,
+    "at": -14.0,
+    "post": -15.5,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init06_trans",
+    "pre": -5.5,
+    "at": -6.8,
+    "post": -9.0,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init06_trans_y",
+    "pre": -33.5,
+    "at": -34.8,
+    "post": -36.6,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init09_trans",
+    "pre": 0.0,
+    "at": 0.0,
+    "post": 0.0,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init09_trans_y",
+    "pre": -17.9,
+    "at": -19.1,
+    "post": -20.7,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init12_trans",
+    "pre": -5.7,
+    "at": -7.0,
+    "post": -9.0,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init12_trans_y",
+    "pre": -4.5,
+    "at": -5.4,
+    "post": -7.2,
+    "new_cover": false,
+    "broken": true
+   },
+   {
+    "tag": "init15_trans",
+    "pre": -5.9,
+    "at": -7.7,
+    "post": -10.0,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init15_trans_y",
+    "pre": -1.5,
+    "at": -2.4,
+    "post": -4.1,
+    "new_cover": false,
+    "broken": false
+   },
+   {
+    "tag": "init17_trans",
+    "pre": -8.4,
+    "at": -10.2,
+    "post": -13.1,
+    "new_cover": true,
+    "broken": false
+   },
+   {
+    "tag": "init17_trans_y",
+    "pre": -4.0,
+    "at": -5.2,
+    "post": -7.4,
+    "new_cover": false,
+    "broken": false
+   }
+  ]
+ },
+ "no_trigger": [
+  "init09_trans"
+ ]
+}

@@ -1,0 +1,12 @@
+asset,object,source_init,source_cond,source_trajectory,truth_used,frozen_at,overlap_with_3a_eval
+pix2w_affine,butter,init30-49,orig/trans/trans_y/rot,results/traj2_*_vanilla.npz + videos2/*_vanilla_*.mp4 接近段帧,tgt_pos_xy (日志真值,最小二乘拟合),2026-11-16,是（标定集=评估集,固定状态比较）
+pix2w_affine,milk,init00-19,orig/trans/trans_y/rot,results/traj3_*_vanilla.npz + videos2/milk_*_vanilla_*.mp4 接近段帧,tgt_pos_xy (日志真值),2026-11-16,是（同上）
+template,tmpl_butter.png 12x18,init43,trans,videos2/init43_trans_vanilla_G.mp4 第0帧 (NCC自匹配1.0确认),无（仅像素裁剪）,2026-11-16,是（评估集内）
+template,tmpl_milk.png 30x26,init00,orig,videos2/milk_init00_orig_vanilla_G.mp4 第0帧 (NCC自匹配1.0确认),无（仅像素裁剪）,2026-11-16,是（评估集内）
+z_prior 0.0087,butter,init30-49,全条件,vanilla 轨迹日志静置段,tgt_pos_z 中位数,2026-11-16,是（评估集日志）
+z_prior 0.0697,milk,init00-19,全条件,vanilla 轨迹日志静置段,tgt_pos_z 中位数,2026-11-16,是（评估集日志）
+score_min 0.55 / k 4,both,-,-,手工设定（任务知识,开发期）,无,2026-11-16,-
+WORKSPACE_RECT (-0.20,0.10,-0.32,-0.10),both,-,-,任务生成区先验（覆盖全部50个init位置簇外扩）,无,2026-11-16,-
+LAST_HOLD 5 / miss→eef回退,both,-,-,冻结漏检策略（设计选择）,无,2026-11-16,-
+CorrState 2C参数,both,init02/init07(trans开发集),trans,早期开发轨迹,冻结于阶段二,更早,-（纠偏器,非感知）
+CAM_POS/CAM_R/FOVY 45,both,-,-,env 相机静态参数一次读取,仿真器常数（仅过滤用,非估计输出）,2026-11-16,-

@@ -1,0 +1,40 @@
+{
+  "phase": "3A perception transfer: visual-2C replaces ground-truth target center",
+  "frozen_at": "2026-11-16 (visgate 跑批前)",
+  "deployment_inputs": {
+    "rgb": "obs['agentview_image'] raw 朝向（策略输入的未旋转版），估计器内部统一 224",
+    "calibration": "静态相机位姿+fovy 一次读取（CAM_POS/CAM_R/FOVY，vision_target.py）",
+    "proprio": "robot0_eef_pos/quat、gripper_qpos（既有日志字段）",
+    "unavailable": "无深度渲染、无手腕相机使用、无实例掩码（本臂）"
+  },
+  "estimator": {
+    "method": "RGB NCC 模板匹配 top-K + 生成区先验过滤 + 像素->世界仿射",
+    "templates": ["runs/predictability/tmpl_butter.png(12x18)", "runs/predictability/tmpl_milk.png(30x26)"],
+    "workspace_rect_xy": [-0.20, 0.10, -0.32, -0.10],
+    "score_min": 0.55, "top_k": 4,
+    "affine": ["runs/predictability/pix2w_butter.json", "runs/predictability/pix2w_milk.json"],
+    "affine_note": "底中点 px224 -> 世界XY 最小二乘仿射；标定于 vanilla 未抬起段",
+    "z_rule": "est_z = 类先验静置质心高（不用顶面像素推 z）",
+    "object_specific": {"butter": {"template": "tmpl_butter.png", "z_prior": 0.0087},
+                        "milk": {"template": "tmpl_milk.png", "z_prior": 0.0697}},
+    "z_prior_note": "类级常数：butter/milk 静置质心高；解决顶面中心-质心高度差问题（milk 顶面 ~0.11 vs 质心 0.070）"
+  },
+  "miss_policy": {
+    "rule": "无工作区内候选 -> miss；沿用最近估计 <= LAST_HOLD=5 步，否则 est=None",
+    "on_miss_feed": "corr.update 输入 tgt_xy=eef_xy（lat=0 天然抑制触发/关断），tgt_z=eef_z",
+    "update": "每步独立估计，无时间滤波；时延=当步帧（1 控制步）"
+  },
+  "corrector_frozen": "与 oracle-2C 完全相同的 CorrState(gated=True) 与参数：Z_LO=0,Z_HI=0.055,Z_LOW_OK=0.02,Z_HY=[-0.005,0.075],DESC_NET=0.002,WIN=4,R_ON=0.025,R_OFF=0.015,K=15,C=0.8；闭合屏蔽+重开逻辑同 gate 臂",
+  "eval_plan": {
+    "arms": ["vanilla(复用)", "gate=oracle-2C(复用)", "visgate(新跑)"],
+    "butter": "task6, init30-49, conds orig/trans/trans_y/rot, seed7, 80 回合",
+    "milk": "task7, init00-19, conds orig,trans,trans_y,rot, seed7, 80 回合",
+    "outputs": "results/traj2_*_visgate.npz / videos2/*_visgate_*.mp4 ; results/traj3_*_visgate.npz / videos2/milk_*_visgate_*.mp4",
+    "traj_extra_fields": ["est_tgt(实际喂 corr 的值)", "vis_miss", "vis_score"]
+  },
+  "offline_verification": {
+    "affine_calib": "butter n=9215 rmse=0.0157 p95=0.0269; milk n=9361 rmse=0.0121 p95=0.0316",
+    "localisation_round1": "butter 接近段XY中位0.0070 p95=0.0198, 闭合前0.0082, z_bias=+0.0023, 漏检11.0%, 翻转690步/66回合; milk XY中位0.0044 p95=0.0118, z_bias=-0.0347(修正后应~0), 漏检22.1%, 翻转551步/42回合",
+    "round2_z_prior_fix": "butter z_prior 0.011->0.0087, milk 0.035->0.0697（日志静置中位）"
+  }
+}

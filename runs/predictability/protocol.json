@@ -1,0 +1,49 @@
+{
+  "experiment": "首次有效闭合步的干预可预测性 (dev set)",
+  "date": "2026-11-14",
+  "dev_set": "init10-29 x {orig,trans,rot,trans_y} = 80 条件状态",
+  "heldout_set": "init30-49 封存不动",
+  "code_sha256": {
+    "scripts/run_correction_eval.py": "fc1b30eba2d099f2",
+    "scripts/detect_triggers.py": "c794c39c2e1fff6a",
+    "scripts/analyze_branch.py": "cf59eb9918a89c0f",
+    "scripts/probe_finger_mid.py": "02ef5f24c855b59f"
+  },
+  "frozen_2B_2C": "results/freeze_2B.json (K=15, C=0.8, R_ON=0.025, R_OFF=0.015, Z band [0,0.055], Z_LOW_OK=0.02, Z_HY=[-0.005,0.075], DESC_NET=0.002, WIN=4)",
+  "decision_step": {
+    "definition": "首个同时满足的控制步: (1) raw[-1]>0 闭合命令; (2) 回放内部2B状态机激活(会覆盖横向); (3) |prop[:2]-raw[:2]| > TOL",
+    "TOL": 0.05,
+    "replay": "gate npz 上离线回放 CorrState(gated=False); 第 j+1 步输入=日志索引 j-1 的 eef/tgt (执行前观测), last_cmd=exec[j-1,-1]",
+    "verification": "6 例已知 t*=[47,42,48,55,85,78] 全部复现; 回放 prop_action 与 diag npz 逐位一致(7/7, diff=0); init12_orig 负对照无触发"
+  },
+  "branches": {
+    "alpha0": "exec=raw at t*, 其余步冻结 2C; 已验证 exec-identical 于 gate (6/6 diff=0)",
+    "alpha1": "exec[:2]=prop[:2] at t*, 其余维度与后续步冻结 2C",
+    "no_trigger": "无触发状态沿用 2C 结果计入分母"
+  },
+  "outcomes": ["attempt_lift(t*闭合段内 tgt_z-rest>=0.04)", "grasp_success(稳定抓起)", "task_success(入篮)", "retries_after_first_close"],
+  "pairwise_labels": ["rescue: a0=0,a1=1", "break: a0=1,a1=0", "both_success", "both_fail"],
+  "geometry": {
+    "finger_mid_xy": "= eef_xy (probe: fmid-eef=[0,0,+4mm] 常值, XY 精确相等)",
+    "finger_axis": "世界 Y (两pad张开距~8.6cm; 夹爪沿Y闭合)",
+    "box_half_mm": [9.0, 19.9],
+    "box_frame": "tgt_quat yaw -> 长轴=y方向(19.9mm), 短轴=x方向(9mm)",
+    "feasible_region_R": {"r_S_mm": 10.0, "r_L_mm": 20.0, "note": "短轴容差~垫带余量, 长轴容差=盒半长; 冻结值, 不拟合"}
+  },
+  "rules": {
+    "A": "tug iff |e_S| > theta_A; e_S=决策步执行前 fmid-tgt 在盒短轴上的投影(m)",
+    "B": "tug iff |e_S|>theta_B1 AND cos(d,-e_xy)>theta_B2 AND trend4=|e_S|(t*-1)-|e_S|(t*-5)>theta_B3; d=prop-raw, e_xy=世界xy误差",
+    "C": "tug iff resid(e+M*prop+b) < resid(e+M*raw+b) - theta_C; e 为盒系 (e_L,e_S), M,b 最小二乘拟合 exec[:2]->Delta e (仅训练折 gate 轨迹), resid=盒系误差到 R 的距离",
+    "contact_input": "不使用 (gate npz 无指垫-目标专属接触; B/C 信息一致)"
+  },
+  "threshold_selection": "阈值只在训练折上网格搜索, 目标=max(#rescue - #break), 平局取更少干预数; theta_A/theta_B1 in {2,...,20}mm, theta_B2 in {0,...,0.9}, theta_B3 in {-10,...,5}mm, theta_C in {0,...,5}mm",
+  "folds": {
+    "method": "按 init 分组 5 折, 同 init 四条件同折; 每折留 4 init 评估, 16 init 训练",
+    "fold1_val": [10, 11, 12, 13],
+    "fold2_val": [14, 15, 16, 17],
+    "fold3_val": [18, 19, 20, 21],
+    "fold4_val": [22, 23, 24, 25],
+    "fold5_val": [26, 27, 28, 29]
+  },
+  "eval": "留出折上比较 always-a0 / always-a1 / A / B / C; 主指标=稳定抓取救回数、破坏数、干预次数; 另报任务结果; 6 个已分析病例单列; B vs C 分歧计数与结局影响"
+}

@@ -1,0 +1,827 @@
+{
+ "mode": "confirm",
+ "issues": [],
+ "rules": {
+  "always_a0": {
+   "N": 80,
+   "trig": 39,
+   "int": 0,
+   "rescue_g": 0,
+   "break_g": 0,
+   "rescue_t": 0,
+   "break_t": 0,
+   "grasp": 73,
+   "task": 58
+  },
+  "always_a1": {
+   "N": 80,
+   "trig": 39,
+   "int": 39,
+   "rescue_g": 1,
+   "break_g": 3,
+   "rescue_t": 4,
+   "break_t": 5,
+   "grasp": 71,
+   "task": 57
+  },
+  "C_fit": {
+   "N": 80,
+   "trig": 39,
+   "int": 13,
+   "rescue_g": 0,
+   "break_g": 2,
+   "rescue_t": 1,
+   "break_t": 2,
+   "grasp": 71,
+   "task": 57
+  },
+  "C_nom": {
+   "N": 80,
+   "trig": 39,
+   "int": 17,
+   "rescue_g": 0,
+   "break_g": 1,
+   "rescue_t": 2,
+   "break_t": 1,
+   "grasp": 72,
+   "task": 59
+  },
+  "C_nom_matched": {
+   "N": 80,
+   "trig": 39,
+   "int": 12,
+   "rescue_g": 0,
+   "break_g": 1,
+   "rescue_t": 2,
+   "break_t": 1,
+   "grasp": 72,
+   "task": 59
+  },
+  "B_fixed": {
+   "N": 80,
+   "trig": 39,
+   "int": 16,
+   "rescue_g": 0,
+   "break_g": 1,
+   "rescue_t": 2,
+   "break_t": 1,
+   "grasp": 72,
+   "task": 59
+  },
+  "B_matched": {
+   "N": 80,
+   "trig": 39,
+   "int": 22,
+   "rescue_g": 0,
+   "break_g": 2,
+   "rescue_t": 3,
+   "break_t": 3,
+   "grasp": 71,
+   "task": 58
+  },
+  "S_short": {
+   "N": 80,
+   "trig": 39,
+   "int": 26,
+   "rescue_g": 1,
+   "break_g": 3,
+   "rescue_t": 4,
+   "break_t": 5,
+   "grasp": 71,
+   "task": 57
+  }
+ },
+ "by_cond": {
+  "always_a0": {
+   "orig": {
+    "N": 20,
+    "trig": 8,
+    "int": 0,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 20,
+    "task": 19
+   },
+   "trans": {
+    "N": 20,
+    "trig": 12,
+    "int": 0,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 11
+   },
+   "rot": {
+    "N": 20,
+    "trig": 7,
+    "int": 0,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 17
+   },
+   "trans_y": {
+    "N": 20,
+    "trig": 12,
+    "int": 0,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 17,
+    "task": 11
+   }
+  },
+  "always_a1": {
+   "orig": {
+    "N": 20,
+    "trig": 8,
+    "int": 8,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 20,
+    "task": 19
+   },
+   "trans": {
+    "N": 20,
+    "trig": 12,
+    "int": 12,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 1,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 12
+   },
+   "rot": {
+    "N": 20,
+    "trig": 7,
+    "int": 7,
+    "rescue_g": 1,
+    "break_g": 0,
+    "rescue_t": 1,
+    "break_t": 0,
+    "grasp": 19,
+    "task": 18
+   },
+   "trans_y": {
+    "N": 20,
+    "trig": 12,
+    "int": 12,
+    "rescue_g": 0,
+    "break_g": 3,
+    "rescue_t": 2,
+    "break_t": 5,
+    "grasp": 14,
+    "task": 8
+   }
+  },
+  "C_fit": {
+   "orig": {
+    "N": 20,
+    "trig": 8,
+    "int": 1,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 20,
+    "task": 19
+   },
+   "trans": {
+    "N": 20,
+    "trig": 12,
+    "int": 7,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 11
+   },
+   "rot": {
+    "N": 20,
+    "trig": 7,
+    "int": 0,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 17
+   },
+   "trans_y": {
+    "N": 20,
+    "trig": 12,
+    "int": 5,
+    "rescue_g": 0,
+    "break_g": 2,
+    "rescue_t": 1,
+    "break_t": 2,
+    "grasp": 15,
+    "task": 10
+   }
+  },
+  "C_nom": {
+   "orig": {
+    "N": 20,
+    "trig": 8,
+    "int": 1,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 20,
+    "task": 19
+   },
+   "trans": {
+    "N": 20,
+    "trig": 12,
+    "int": 12,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 1,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 12
+   },
+   "rot": {
+    "N": 20,
+    "trig": 7,
+    "int": 0,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 17
+   },
+   "trans_y": {
+    "N": 20,
+    "trig": 12,
+    "int": 4,
+    "rescue_g": 0,
+    "break_g": 1,
+    "rescue_t": 1,
+    "break_t": 1,
+    "grasp": 16,
+    "task": 11
+   }
+  },
+  "C_nom_matched": {
+   "orig": {
+    "N": 20,
+    "trig": 8,
+    "int": 0,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 20,
+    "task": 19
+   },
+   "trans": {
+    "N": 20,
+    "trig": 12,
+    "int": 9,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 1,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 12
+   },
+   "rot": {
+    "N": 20,
+    "trig": 7,
+    "int": 0,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 17
+   },
+   "trans_y": {
+    "N": 20,
+    "trig": 12,
+    "int": 3,
+    "rescue_g": 0,
+    "break_g": 1,
+    "rescue_t": 1,
+    "break_t": 1,
+    "grasp": 16,
+    "task": 11
+   }
+  },
+  "B_fixed": {
+   "orig": {
+    "N": 20,
+    "trig": 8,
+    "int": 2,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 20,
+    "task": 19
+   },
+   "trans": {
+    "N": 20,
+    "trig": 12,
+    "int": 10,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 1,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 12
+   },
+   "rot": {
+    "N": 20,
+    "trig": 7,
+    "int": 0,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 17
+   },
+   "trans_y": {
+    "N": 20,
+    "trig": 12,
+    "int": 4,
+    "rescue_g": 0,
+    "break_g": 1,
+    "rescue_t": 1,
+    "break_t": 1,
+    "grasp": 16,
+    "task": 11
+   }
+  },
+  "B_matched": {
+   "orig": {
+    "N": 20,
+    "trig": 8,
+    "int": 2,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 20,
+    "task": 19
+   },
+   "trans": {
+    "N": 20,
+    "trig": 12,
+    "int": 11,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 1,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 12
+   },
+   "rot": {
+    "N": 20,
+    "trig": 7,
+    "int": 0,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 17
+   },
+   "trans_y": {
+    "N": 20,
+    "trig": 12,
+    "int": 9,
+    "rescue_g": 0,
+    "break_g": 2,
+    "rescue_t": 2,
+    "break_t": 3,
+    "grasp": 15,
+    "task": 10
+   }
+  },
+  "S_short": {
+   "orig": {
+    "N": 20,
+    "trig": 8,
+    "int": 4,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 0,
+    "break_t": 0,
+    "grasp": 20,
+    "task": 19
+   },
+   "trans": {
+    "N": 20,
+    "trig": 12,
+    "int": 7,
+    "rescue_g": 0,
+    "break_g": 0,
+    "rescue_t": 1,
+    "break_t": 0,
+    "grasp": 18,
+    "task": 12
+   },
+   "rot": {
+    "N": 20,
+    "trig": 7,
+    "int": 3,
+    "rescue_g": 1,
+    "break_g": 0,
+    "rescue_t": 1,
+    "break_t": 0,
+    "grasp": 19,
+    "task": 18
+   },
+   "trans_y": {
+    "N": 20,
+    "trig": 12,
+    "int": 12,
+    "rescue_g": 0,
+    "break_g": 3,
+    "rescue_t": 2,
+    "break_t": 5,
+    "grasp": 14,
+    "task": 8
+   }
+  }
+ },
+ "C_fit_vs_a1": {
+  "avoided_break_grasp": [
+   "init36_trans_y"
+  ],
+  "missed_rescue_grasp": [
+   "init36_rot"
+  ],
+  "avoided_break_task": [
+   "init36_trans_y",
+   "init48_trans_y",
+   "init49_trans_y"
+  ],
+  "missed_rescue_task": [
+   "init36_rot",
+   "init42_trans_y",
+   "init43_trans"
+  ]
+ },
+ "disagree": {
+  "S_short": {
+   "n": 23,
+   "grasp_changing": [
+    [
+     "init36_rot",
+     "rescue",
+     "S_short牵"
+    ],
+    [
+     "init36_trans_y",
+     "break",
+     "S_short牵"
+    ]
+   ],
+   "task_changing": [
+    [
+     "init36_rot",
+     "rescue",
+     "S_short牵"
+    ],
+    [
+     "init36_trans_y",
+     "break",
+     "S_short牵"
+    ],
+    [
+     "init42_trans_y",
+     "rescue",
+     "S_short牵"
+    ],
+    [
+     "init43_trans",
+     "rescue",
+     "S_short牵"
+    ],
+    [
+     "init48_trans_y",
+     "break",
+     "S_short牵"
+    ],
+    [
+     "init49_trans_y",
+     "break",
+     "S_short牵"
+    ]
+   ]
+  },
+  "B_fixed": {
+   "n": 13,
+   "grasp_changing": [
+    [
+     "init31_trans_y",
+     "break",
+     "C_fit牵"
+    ]
+   ],
+   "task_changing": [
+    [
+     "init31_trans_y",
+     "break",
+     "C_fit牵"
+    ],
+    [
+     "init42_trans_y",
+     "rescue",
+     "B_fixed牵"
+    ],
+    [
+     "init43_trans",
+     "rescue",
+     "B_fixed牵"
+    ],
+    [
+     "init46_trans_y",
+     "rescue",
+     "C_fit牵"
+    ]
+   ]
+  },
+  "B_matched": {
+   "n": 15,
+   "grasp_changing": [
+    [
+     "init31_trans_y",
+     "break",
+     "C_fit牵"
+    ],
+    [
+     "init36_trans_y",
+     "break",
+     "B_matched牵"
+    ]
+   ],
+   "task_changing": [
+    [
+     "init31_trans_y",
+     "break",
+     "C_fit牵"
+    ],
+    [
+     "init36_trans_y",
+     "break",
+     "B_matched牵"
+    ],
+    [
+     "init42_trans_y",
+     "rescue",
+     "B_matched牵"
+    ],
+    [
+     "init43_trans",
+     "rescue",
+     "B_matched牵"
+    ],
+    [
+     "init49_trans_y",
+     "break",
+     "B_matched牵"
+    ]
+   ]
+  },
+  "C_nom": {
+   "n": 6,
+   "grasp_changing": [
+    [
+     "init37_trans_y",
+     "break",
+     "C_fit牵"
+    ]
+   ],
+   "task_changing": [
+    [
+     "init37_trans_y",
+     "break",
+     "C_fit牵"
+    ],
+    [
+     "init43_trans",
+     "rescue",
+     "C_nom牵"
+    ]
+   ]
+  },
+  "C_nom_matched": {
+   "n": 5,
+   "grasp_changing": [
+    [
+     "init37_trans_y",
+     "break",
+     "C_fit牵"
+    ]
+   ],
+   "task_changing": [
+    [
+     "init37_trans_y",
+     "break",
+     "C_fit牵"
+    ],
+    [
+     "init43_trans",
+     "rescue",
+     "C_nom_matched牵"
+    ]
+   ]
+  },
+  "always_a1": {
+   "n": 26,
+   "grasp_changing": [
+    [
+     "init36_rot",
+     "rescue",
+     "always_a1牵"
+    ],
+    [
+     "init36_trans_y",
+     "break",
+     "always_a1牵"
+    ]
+   ],
+   "task_changing": [
+    [
+     "init36_rot",
+     "rescue",
+     "always_a1牵"
+    ],
+    [
+     "init36_trans_y",
+     "break",
+     "always_a1牵"
+    ],
+    [
+     "init42_trans_y",
+     "rescue",
+     "always_a1牵"
+    ],
+    [
+     "init43_trans",
+     "rescue",
+     "always_a1牵"
+    ],
+    [
+     "init48_trans_y",
+     "break",
+     "always_a1牵"
+    ],
+    [
+     "init49_trans_y",
+     "break",
+     "always_a1牵"
+    ]
+   ]
+  }
+ },
+ "boot": {
+  "C_fit-always_a1:grasp": {
+   "diff": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "nonzero_clusters": 0
+  },
+  "C_fit-always_a1:task": {
+   "diff": 0.0,
+   "ci95": [
+    -4.0,
+    4.0
+   ],
+   "nonzero_clusters": 4
+  },
+  "C_fit-always_a0:grasp": {
+   "diff": -2.0,
+   "ci95": [
+    -5.0,
+    0.0
+   ],
+   "nonzero_clusters": 2
+  },
+  "C_fit-always_a0:task": {
+   "diff": -1.0,
+   "ci95": [
+    -4.0,
+    2.0
+   ],
+   "nonzero_clusters": 3
+  },
+  "always_a1-always_a0:grasp": {
+   "diff": -2.0,
+   "ci95": [
+    -5.0,
+    0.0
+   ],
+   "nonzero_clusters": 2
+  },
+  "always_a1-always_a0:task": {
+   "diff": -1.0,
+   "ci95": [
+    -6.0,
+    4.0
+   ],
+   "nonzero_clusters": 7
+  },
+  "C_fit-S_short:grasp": {
+   "diff": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "nonzero_clusters": 0
+  },
+  "C_fit-S_short:task": {
+   "diff": 0.0,
+   "ci95": [
+    -4.0,
+    4.0
+   ],
+   "nonzero_clusters": 4
+  },
+  "C_fit-B_fixed:grasp": {
+   "diff": -1.0,
+   "ci95": [
+    -3.0,
+    0.0
+   ],
+   "nonzero_clusters": 1
+  },
+  "C_fit-B_fixed:task": {
+   "diff": -2.0,
+   "ci95": [
+    -6.0,
+    2.0
+   ],
+   "nonzero_clusters": 4
+  },
+  "C_fit-B_matched:grasp": {
+   "diff": 0.0,
+   "ci95": [
+    -3.0,
+    3.0
+   ],
+   "nonzero_clusters": 2
+  },
+  "C_fit-B_matched:task": {
+   "diff": -1.0,
+   "ci95": [
+    -5.0,
+    3.0
+   ],
+   "nonzero_clusters": 5
+  },
+  "C_fit-C_nom:grasp": {
+   "diff": -1.0,
+   "ci95": [
+    -3.0,
+    0.0
+   ],
+   "nonzero_clusters": 1
+  },
+  "C_fit-C_nom:task": {
+   "diff": -2.0,
+   "ci95": [
+    -5.0,
+    0.0
+   ],
+   "nonzero_clusters": 2
+  },
+  "C_fit-C_nom_matched:grasp": {
+   "diff": -1.0,
+   "ci95": [
+    -3.0,
+    0.0
+   ],
+   "nonzero_clusters": 1
+  },
+  "C_fit-C_nom_matched:task": {
+   "diff": -2.0,
+   "ci95": [
+    -5.0,
+    0.0
+   ],
+   "nonzero_clusters": 2
+  }
+ },
+ "H1_design_check": true
+}

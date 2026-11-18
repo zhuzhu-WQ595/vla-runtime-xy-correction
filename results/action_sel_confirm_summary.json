@@ -1,0 +1,183 @@
+{
+ "n_states": 32,
+ "sel_mismatch": [],
+ "endpoints": {
+  "g": {
+   "butter": {
+    "n": 16,
+    "interventions": 7,
+    "sel": 15,
+    "c0": 13,
+    "px": 15,
+    "pobj": 13,
+    "trans": {
+     "interventions": 2,
+     "sel": 8,
+     "pobj": 7
+    },
+    "trans_y": {
+     "interventions": 5,
+     "sel": 7,
+     "pobj": 6
+    }
+   },
+   "milk": {
+    "n": 16,
+    "interventions": 9,
+    "sel": 9,
+    "c0": 12,
+    "px": 8,
+    "pobj": 8,
+    "trans": {
+     "interventions": 3,
+     "sel": 7,
+     "pobj": 6
+    },
+    "trans_y": {
+     "interventions": 6,
+     "sel": 2,
+     "pobj": 2
+    }
+   },
+   "all": {
+    "sel": 24,
+    "c0": 25,
+    "px": 23,
+    "pobj": 21,
+    "interventions": 16
+   },
+   "gain_vs_c0": [
+    "init33_trans",
+    "init36_trans_y"
+   ],
+   "loss_vs_c0": [
+    "init05_trans_y",
+    "init08_trans_y",
+    "init14_trans"
+   ],
+   "gain_vs_px": [
+    "init11_trans"
+   ],
+   "loss_vs_px": [],
+   "gain_vs_pobj": [
+    "init33_trans",
+    "init36_trans_y",
+    "init11_trans"
+   ],
+   "loss_vs_pobj": [],
+   "effective_div": [
+    "init33_trans",
+    "init36_trans_y",
+    "init05_trans_y",
+    "init08_trans_y",
+    "init14_trans"
+   ],
+   "ci_sel_minus_pobj": [
+    0.094,
+    0.0,
+    0.188
+   ],
+   "ci_sel_minus_c0": [
+    -0.031,
+    -0.156,
+    0.094
+   ],
+   "ci_sel_minus_px": [
+    0.031,
+    0.0,
+    0.094
+   ]
+  },
+  "t": {
+   "butter": {
+    "n": 16,
+    "interventions": 7,
+    "sel": 13,
+    "c0": 11,
+    "px": 12,
+    "pobj": 11,
+    "trans": {
+     "interventions": 2,
+     "sel": 8,
+     "pobj": 7
+    },
+    "trans_y": {
+     "interventions": 5,
+     "sel": 5,
+     "pobj": 4
+    }
+   },
+   "milk": {
+    "n": 16,
+    "interventions": 9,
+    "sel": 5,
+    "c0": 6,
+    "px": 5,
+    "pobj": 5,
+    "trans": {
+     "interventions": 3,
+     "sel": 4,
+     "pobj": 4
+    },
+    "trans_y": {
+     "interventions": 6,
+     "sel": 1,
+     "pobj": 1
+    }
+   },
+   "all": {
+    "sel": 18,
+    "c0": 17,
+    "px": 17,
+    "pobj": 16,
+    "interventions": 16
+   },
+   "gain_vs_c0": [
+    "init33_trans",
+    "init36_trans_y",
+    "init16_trans"
+   ],
+   "loss_vs_c0": [
+    "init08_trans_y",
+    "init16_trans_y"
+   ],
+   "gain_vs_px": [
+    "init31_trans_y",
+    "init11_trans"
+   ],
+   "loss_vs_px": [
+    "init05_trans"
+   ],
+   "gain_vs_pobj": [
+    "init33_trans",
+    "init36_trans_y",
+    "init11_trans"
+   ],
+   "loss_vs_pobj": [
+    "init05_trans"
+   ],
+   "effective_div": [
+    "init33_trans",
+    "init36_trans_y",
+    "init08_trans_y",
+    "init16_trans",
+    "init16_trans_y"
+   ],
+   "ci_sel_minus_pobj": [
+    0.062,
+    -0.062,
+    0.188
+   ],
+   "ci_sel_minus_c0": [
+    0.031,
+    -0.062,
+    0.125
+   ],
+   "ci_sel_minus_px": [
+    0.031,
+    -0.062,
+    0.125
+   ]
+  }
+ }
+}

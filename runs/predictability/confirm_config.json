@@ -1,0 +1,61 @@
+{
+  "purpose": "拟用于独立确认（init30-49）的冻结配置；本文件写成时 init30-49 未读取、未运行",
+  "frozen_on": "2026-11-15",
+  "fit_data": "开发集 init10-29 × 4 条件全部 80 状态（M,b 用 80 条 gate 轨迹；阈值用 48 个触发状态）",
+  "confirm_set": "init30-49 × {orig, trans, rot, trans_y} = 80 状态；全部计入分母，包括无触发回合",
+  "code_sha256_16": {
+    "scripts/run_correction_eval.py": "fc1b30eba2d099f2",
+    "scripts/detect_triggers.py": "c794c39c2e1fff6a",
+    "scripts/analyze_predictability.py": "255c5cdd357dfc75",
+    "scripts/audit_predictability.py": "d772f41d7db07d33"
+  },
+  "frozen_2B_2C": "results/freeze_2B.json，不改",
+  "decision_step": {
+    "definition": "首个同时满足的控制步：raw[-1]>0；内部 2B 状态机激活；|prop[:2]-raw[:2]| > 0.05",
+    "TOL": 0.05,
+    "index": "第 j+1 步的输入 = 日志索引 j-1 的 eef/tgt；last_cmd = exec[j-1,-1]；raw 取索引 j",
+    "checks": "α=0 分支 exec_action 与 gate 逐位一致；α=1 前缀与 gate 前缀逐位一致"
+  },
+  "branches": {
+    "alpha0": "t* 步执行 raw，后续按冻结 2C 闭环（等同 gate）",
+    "alpha1": "仅 t* 步 exec[:2]=prop[:2]，夹爪与其余维度保持 raw，后续按冻结 2C 闭环"
+  },
+  "features_as_frozen": {
+    "e_xy": "eef_xy - tgt_xy，取决策前观测（索引 t*-2）。注：基点为 eef 而非指垫中点（开发集决策与 fmid 基点 0/48 不同）",
+    "body_axes": "psi = yaw(tgt_quat, xyzw)；bx=(cos psi, sin psi) 为盒体真长轴（半长 38.1mm）；by=(-sin psi, cos psi) 为真短轴/闭合方向（半宽 19.8mm）",
+    "code_names": "代码中的 e_S = |e·bx|（真长轴误差），e_L = e·by（真短轴误差）；规则数值按代码冻结，不改名义",
+    "trend4": "|e·bx|(t*-2) - |e·bx|(t*-6)",
+    "cos_d": "cos(prop[:2]-raw[:2], -e_xy)；B 不使用 |prop-raw| 的幅值",
+    "feasible_region": "|e·by| <= 20mm 且 |e·bx| <= 10mm；resid = 到该矩形的欧氏距离"
+  },
+  "primary_rule": {
+    "name": "C_fit",
+    "rule": "tug iff resid(e + M raw + b) - resid(e + M prop + b) > theta_C",
+    "M_m_per_unit": [[0.004635, -0.001180], [-0.003601, 0.005341]],
+    "b_m": [0.000187, -0.001315],
+    "M_fit": "最小二乘 Δe(索引 j→j+1) ~ exec[:2](索引 j) + b（与开发流程相同的配对方式；比正确对齐的配对差异 <0.15 mm/单位）",
+    "theta_C_m": 0.002,
+    "dev_intervention_rate": "24/48 = 0.50"
+  },
+  "comparators": {
+    "always_a0": "= 冻结 2C",
+    "always_a1": "每个触发状态都在 t* 牵引",
+    "C_nom": {"M": "0.0128*I", "b": [0, 0], "theta_C_m": 0.004, "dev_interventions": "28/48"},
+    "C_nom_matched": {"theta_C_m": 0.005821, "dev_interventions": "24/48"},
+    "B_fixed": {"theta_B1_m": 0.002, "theta_B2": 0.7, "theta_B3_m": -0.002, "dev_interventions": "14/48"},
+    "B_matched": {"theta_B1_m": 0.002, "theta_B2": 0.3, "theta_B3_m": -0.004, "dev_interventions": "24/48", "note": "B* 族中与 C_fit 开发预算相同"}
+  },
+  "threshold_selection_used": "目标 max(rescue - break)，平局取干预更少者，再按网格顺序（已修正 as-run 的平局比较缺陷）",
+  "endpoints": {
+    "co_primary": ["稳定抓取 grasp_success /80", "完整入篮 task_success /80"],
+    "secondary": ["干预次数", "相对 α=0 的 rescue/break 计数", "触发覆盖率（按条件）"],
+    "reporting": "同时报告 80 状态全量；按规则列出与 always_a1 的不一致配对；不重新调阈值，不按确认集结局挑预算或规则"
+  },
+  "pre_stated_expectations": {
+    "H1": "C_fit 的 break 数 <= always_a1 的 break 数",
+    "H2": "C_fit 的稳定抓取数 >= always_a1，同时干预更少",
+    "H3_task": "单独报告完整入篮；开发集上 C_fit 57/80、always_a1 58/80，不预设 C_fit 在入篮上占优",
+    "power_note": "开发集 48 个触发状态中仅 6 个抓取翻转（其余 74 状态中仅 1 个）；确认集预计翻转同样稀少，结果以精确计数与不一致配对数报告"
+  },
+  "exploratory_not_for_decision": "开发集观察到救回例闭合方向误差 |e·by| 为 23-35mm、破坏例为 8-12mm；该现象是看过结局后发现的，只作描述，不作为确认规则"
+}

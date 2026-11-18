@@ -1,0 +1,53 @@
+{
+ "stage": "2B",
+ "date": "2026-11-14",
+ "note": "参数自阶段二A开发集(init00-09)冻结，本批不改任何纠偏逻辑/阈值",
+ "dev_set": "results/paired_corr.csv (init00-09)",
+ "code_sha256": {
+  "scripts/run_correction_eval.py": "9fb3cabb9d8264ee",
+  "scripts/run_perturb_eval.py": "58064a97c2d4e965",
+  "<home>/openvla/experiments/robot/openvla_utils.py": "07b36f78006b1778"
+ },
+ "correction_params": {
+  "reference": "eef_xy vs obs[butter_1_pos].xy (oracle 当前观测)",
+  "trigger_enter": "last_grip_cmd<0 AND z_gap in [0.0,0.055] AND (net_descent_4step>=0.002 OR z_gap<0.02) AND lat_err>0.025",
+  "trigger_hold": "lat_err>0.015 AND z_gap in [-0.005,0.075] AND gripper open",
+  "action_override": "action[:2]=clip(15*err_xy, +-0.8); dz/rot/gripper 保留策略输出",
+  "K_CORR": 15.0,
+  "C_CORR": 0.8,
+  "WIN": 4,
+  "R_ON": 0.025,
+  "R_OFF": 0.015,
+  "Z_LO": 0.0,
+  "Z_HI": 0.055,
+  "Z_LOW_OK": 0.02,
+  "Z_HY": [
+   -0.005,
+   0.075
+  ],
+  "DESC_NET": 0.002
+ },
+ "eval_params": {
+  "SEED": 7,
+  "MAX_STEPS": 280,
+  "NUM_WAIT": 10,
+  "LIFT_H": 0.04,
+  "LIFT_HOLD_STEPS": 15,
+  "NEAR_DIST": 0.08,
+  "TASK_ID": 6,
+  "suite": "libero_object",
+  "model": "openvla-7b-finetuned-libero-object 4bit"
+ },
+ "conditions_main": {
+  "orig": "baseline",
+  "trans": "+5cm x",
+  "rot": "+30deg yaw about world-z through COM"
+ },
+ "conditions_stress": {
+  "trans_y": "+5cm y (orthogonal)"
+ },
+ "batch": {
+  "init_range": "10-29 (20 new states; 50 total, dev=0-9)",
+  "eps": "main 20x3x2=120; stress 20x1x2=40"
+ }
+}

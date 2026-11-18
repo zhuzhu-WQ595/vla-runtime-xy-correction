@@ -1,0 +1,38 @@
+{
+ "stage": "4A",
+ "purpose": "局部抓取位姿候选的配对上限：在相同前缀上，少量可执行候选能否覆盖基线失败（headroom 上限研究，不训练模型）",
+ "frozen_at": "2026-11-17（早于任何候选结局产生）",
+ "baseline": "vislock（visual_initial_lock，阶段三 C 冻结臂；本阶段重跑于开发状态）",
+ "pairing": "每个候选从相同 init state+相同扰动全新重建；策略/仿真确定性保证分歧前前缀逐比特相同",
+ "decision_moment": {
+  "rule": "首个满足全部条件的控制步：(a) 3D |eef−锁定目标| < 70mm；(b) 尚无闭合命令；(c) 已获得锁定估计",
+  "online_detectable": "eef 与锁定目标均在线可得；发生在闭合前且其后仍有执行窗口（冒烟实测接近段≈10步，30mm 阈值过晚已上调至 70mm）",
+  "no_trigger": "全程未满足（如无锁定或从未接近）→ 该回合同基线，保留并标记 cand_step=null"
+ },
+ "candidates": {
+  "c0": "基线（无任何干预，配对校验列）",
+  "px": "沿夹爪闭合轴 u=normalize(finger2−finger1 的 XY 投影) 目标 +5mm 世界平移",
+  "nx": "同轴 −5mm",
+  "ry": "世界系 yaw 正偏（偏置 action[3]，该维实测为世界z通道 exec[3]~world-z r=-0.71；0.2 raw/步持续至闭合+2（≈10-15° achieved，冒烟 0.3 得 17.5°））",
+  "ly": "世界系 yaw 负偏（同通道 −0.2 raw/步）。注：首版误用 action[5]（实测绕世界X轴），已作废重跑"
+ },
+ "execution": {
+  "window": "决策步起偏置持续至 首次闭合命令+2 步 或 W_MAX=30 步（先到先停）——冒烟证明瞬时窗口被策略伺服回拉，必须持续至闭合才能改变抓取位姿",
+  "method": "对执行动作加偏置：平移候选 action[:2]+=u*0.039 raw/步（≈0.5mm/步）；yaw 候选 action[3]+=±0.2 raw/步（世界系yaw通道）；施加于 corr/屏蔽之后的最终动作",
+  "budget": "名义目标位移 5mm（平移）/ yaw 0.3 raw·步持续至闭合+2；闭合期间重叠步不截断（记录 overlap）",
+  "achieved": "记录决策步与窗口末的 eef_pos/eef_quat；实际达到位姿差以同状态 c0 基线逐步对齐的 eef_pos/eef_quat 差为准（剔除策略自身运动）"
+ },
+ "states": {
+  "dev": "开发状态（阶段三 A 集，非冻结验证状态）",
+  "butter": "init30-49 原位置，挑选 7 init × {trans,trans_y} = 14 状态：{30,44} 基线成功型 + {34,37,40,43,46} 失败倾向型（按 3A visgate 结局分层，仅作抽样依据）",
+  "milk": "init00-19，挑选 8 init × {trans,trans_y} = 16 状态：{01,15} 成功型 + {04,12,17} 失败型 + {00,06,09} 混合型",
+  "n": 30
+ },
+ "endpoints": "稳定抓取（主）、完整入篮（次），主表分列",
+ "questions": [
+  "Q1 基线失败且至少一个候选成功的状态数",
+  "Q2 基线成功且某候选失败的状态数（候选代价）",
+  "Q3 单一固定候选最大收益；按状态事后择优（oracle pick）的额外覆盖（上限）"
+ ],
+ "deliverables": ["results/pose_cand_{butter,milk}.csv 候选×状态矩阵", "LOCAL_GRASP_CANDIDATE_HEADROOM.md"]
+}

@@ -1,0 +1,1564 @@
+{
+ "fold_info": [
+  {
+   "fold": 1,
+   "M_mm_per_unit": [
+    [
+     4.96,
+     -1.22
+    ],
+    [
+     -3.88,
+     5.28
+    ]
+   ],
+   "b_mm": [
+    0.14,
+    -1.3
+   ],
+   "asrun": {
+    "A": 0.020000000000000004,
+    "B": [
+     0.020000000000000004,
+     0.9,
+     0.0
+    ],
+    "C": 0.002
+   },
+   "fixed": {
+    "A": 0.020000000000000004,
+    "B": [
+     0.020000000000000004,
+     0.0,
+     0.0
+    ],
+    "Cfit": 0.002,
+    "Cnom": 0.004
+   },
+   "n_train_trig": 38,
+   "n_val_trig": 10
+  },
+  {
+   "fold": 2,
+   "M_mm_per_unit": [
+    [
+     4.43,
+     -1.15
+    ],
+    [
+     -3.58,
+     5.29
+    ]
+   ],
+   "b_mm": [
+    0.23,
+    -1.32
+   ],
+   "asrun": {
+    "A": 0.020000000000000004,
+    "B": [
+     0.018000000000000002,
+     0.7000000000000001,
+     -0.002
+    ],
+    "C": 0.002
+   },
+   "fixed": {
+    "A": 0.020000000000000004,
+    "B": [
+     0.002,
+     0.7000000000000001,
+     -0.002
+    ],
+    "Cfit": 0.002,
+    "Cnom": 0.004
+   },
+   "n_train_trig": 39,
+   "n_val_trig": 9
+  },
+  {
+   "fold": 3,
+   "M_mm_per_unit": [
+    [
+     4.58,
+     -1.14
+    ],
+    [
+     -3.35,
+     5.5
+    ]
+   ],
+   "b_mm": [
+    0.19,
+    -1.29
+   ],
+   "asrun": {
+    "A": 0.014,
+    "B": [
+     0.018000000000000002,
+     0.7000000000000001,
+     -0.002
+    ],
+    "C": 0.002
+   },
+   "fixed": {
+    "A": 0.002,
+    "B": [
+     0.002,
+     0.7000000000000001,
+     -0.002
+    ],
+    "Cfit": 0.002,
+    "Cnom": 0.004
+   },
+   "n_train_trig": 38,
+   "n_val_trig": 10
+  },
+  {
+   "fold": 4,
+   "M_mm_per_unit": [
+    [
+     4.77,
+     -1.17
+    ],
+    [
+     -3.47,
+     5.45
+    ]
+   ],
+   "b_mm": [
+    0.18,
+    -1.26
+   ],
+   "asrun": {
+    "A": 0.014,
+    "B": [
+     0.018000000000000002,
+     0.7000000000000001,
+     -0.002
+    ],
+    "C": 0.002
+   },
+   "fixed": {
+    "A": 0.014,
+    "B": [
+     0.002,
+     0.6000000000000001,
+     -0.002
+    ],
+    "Cfit": 0.002,
+    "Cnom": 0.004
+   },
+   "n_train_trig": 38,
+   "n_val_trig": 10
+  },
+  {
+   "fold": 5,
+   "M_mm_per_unit": [
+    [
+     4.47,
+     -1.23
+    ],
+    [
+     -3.78,
+     5.19
+    ]
+   ],
+   "b_mm": [
+    0.19,
+    -1.4
+   ],
+   "asrun": {
+    "A": 0.014,
+    "B": [
+     0.018000000000000002,
+     0.7000000000000001,
+     -0.002
+    ],
+    "C": 0.002
+   },
+   "fixed": {
+    "A": 0.014,
+    "B": [
+     0.002,
+     0.7000000000000001,
+     -0.002
+    ],
+    "Cfit": 0.002,
+    "Cnom": 0.004
+   },
+   "n_train_trig": 39,
+   "n_val_trig": 9
+  }
+ ],
+ "summary": {
+  "always_a0": {
+   "80": {
+    "N": 80,
+    "trig": 48,
+    "int": 0,
+    "rescue": 0,
+    "break": 0,
+    "grasp": 69,
+    "task": 54
+   },
+   "74": {
+    "N": 74,
+    "trig": 42,
+    "int": 0,
+    "rescue": 0,
+    "break": 0,
+    "grasp": 67,
+    "task": 52
+   }
+  },
+  "always_a1": {
+   "80": {
+    "N": 80,
+    "trig": 48,
+    "int": 48,
+    "rescue": 4,
+    "break": 2,
+    "grasp": 71,
+    "task": 58
+   },
+   "74": {
+    "N": 74,
+    "trig": 42,
+    "int": 42,
+    "rescue": 1,
+    "break": 0,
+    "grasp": 68,
+    "task": 56
+   }
+  },
+  "asrun_A": {
+   "80": {
+    "N": 80,
+    "trig": 48,
+    "int": 37,
+    "rescue": 1,
+    "break": 2,
+    "grasp": 68,
+    "task": 54
+   },
+   "74": {
+    "N": 74,
+    "trig": 42,
+    "int": 33,
+    "rescue": 0,
+    "break": 0,
+    "grasp": 67,
+    "task": 54
+   }
+  },
+  "asrun_B": {
+   "80": {
+    "N": 80,
+    "trig": 48,
+    "int": 13,
+    "rescue": 1,
+    "break": 0,
+    "grasp": 70,
+    "task": 55
+   },
+   "74": {
+    "N": 74,
+    "trig": 42,
+    "int": 12,
+    "rescue": 0,
+    "break": 0,
+    "grasp": 67,
+    "task": 53
+   }
+  },
+  "asrun_C": {
+   "80": {
+    "N": 80,
+    "trig": 48,
+    "int": 23,
+    "rescue": 3,
+    "break": 0,
+    "grasp": 72,
+    "task": 57
+   },
+   "74": {
+    "N": 74,
+    "trig": 42,
+    "int": 20,
+    "rescue": 1,
+    "break": 0,
+    "grasp": 68,
+    "task": 54
+   }
+  },
+  "fix_A": {
+   "80": {
+    "N": 80,
+    "trig": 48,
+    "int": 39,
+    "rescue": 1,
+    "break": 2,
+    "grasp": 68,
+    "task": 54
+   },
+   "74": {
+    "N": 74,
+    "trig": 42,
+    "int": 35,
+    "rescue": 0,
+    "break": 0,
+    "grasp": 67,
+    "task": 54
+   }
+  },
+  "fix_B": {
+   "80": {
+    "N": 80,
+    "trig": 48,
+    "int": 14,
+    "rescue": 1,
+    "break": 0,
+    "grasp": 70,
+    "task": 56
+   },
+   "74": {
+    "N": 74,
+    "trig": 42,
+    "int": 13,
+    "rescue": 0,
+    "break": 0,
+    "grasp": 67,
+    "task": 54
+   }
+  },
+  "fix_Cfit": {
+   "80": {
+    "N": 80,
+    "trig": 48,
+    "int": 23,
+    "rescue": 3,
+    "break": 0,
+    "grasp": 72,
+    "task": 57
+   },
+   "74": {
+    "N": 74,
+    "trig": 42,
+    "int": 20,
+    "rescue": 1,
+    "break": 0,
+    "grasp": 68,
+    "task": 54
+   }
+  },
+  "fix_Cnom": {
+   "80": {
+    "N": 80,
+    "trig": 48,
+    "int": 28,
+    "rescue": 4,
+    "break": 0,
+    "grasp": 73,
+    "task": 58
+   },
+   "74": {
+    "N": 74,
+    "trig": 42,
+    "int": 24,
+    "rescue": 1,
+    "break": 0,
+    "grasp": 68,
+    "task": 54
+   }
+  },
+  "Cfit_fmid": {
+   "80": {
+    "N": 80,
+    "trig": 48,
+    "int": 23,
+    "rescue": 3,
+    "break": 0,
+    "grasp": 72,
+    "task": 57
+   },
+   "74": {
+    "N": 74,
+    "trig": 42,
+    "int": 20,
+    "rescue": 1,
+    "break": 0,
+    "grasp": 68,
+    "task": 54
+   }
+  }
+ },
+ "budget": [
+  {
+   "rate": 0.2,
+   "family": "B1",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "k_targets": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "val_int": 11,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 11,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 10,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.2,
+   "family": "B1",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "k_targets": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "val_int": 11,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 11,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 10,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.2,
+   "family": "Bstar",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "k_targets": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "val_int": 11,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 11,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 10,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.2,
+   "family": "Bstar",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "k_targets": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "val_int": 11,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 11,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 10,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.2,
+   "family": "Cfit",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "k_targets": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "val_int": 10,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 10,
+   "80_rescue": 3,
+   "80_break": 0,
+   "80_grasp": 72,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 7,
+   "74_rescue": 1,
+   "74_break": 0,
+   "74_grasp": 68,
+   "74_task": 52
+  },
+  {
+   "rate": 0.2,
+   "family": "Cfit",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "k_targets": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "val_int": 10,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 10,
+   "80_rescue": 3,
+   "80_break": 0,
+   "80_grasp": 72,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 7,
+   "74_rescue": 1,
+   "74_break": 0,
+   "74_grasp": 68,
+   "74_task": 52
+  },
+  {
+   "rate": 0.2,
+   "family": "Cnom",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "k_targets": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "val_int": 11,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 11,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 9,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 52
+  },
+  {
+   "rate": 0.2,
+   "family": "Cnom",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "k_targets": [
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "val_int": 11,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 11,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 9,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 52
+  },
+  {
+   "rate": 0.3,
+   "family": "B1",
+   "side": "lo",
+   "exact": false,
+   "train_counts": [
+    8,
+    12,
+    11,
+    11,
+    12
+   ],
+   "k_targets": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "val_int": 14,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 14,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 13,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.3,
+   "family": "Bstar",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "k_targets": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "val_int": 15,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 15,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 14,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.3,
+   "family": "Bstar",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "k_targets": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "val_int": 15,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 15,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 14,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.3,
+   "family": "Cfit",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "k_targets": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "val_int": 14,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 14,
+   "80_rescue": 3,
+   "80_break": 0,
+   "80_grasp": 72,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 11,
+   "74_rescue": 1,
+   "74_break": 0,
+   "74_grasp": 68,
+   "74_task": 52
+  },
+  {
+   "rate": 0.3,
+   "family": "Cfit",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "k_targets": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "val_int": 14,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 14,
+   "80_rescue": 3,
+   "80_break": 0,
+   "80_grasp": 72,
+   "80_task": 55,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 11,
+   "74_rescue": 1,
+   "74_break": 0,
+   "74_grasp": 68,
+   "74_task": 52
+  },
+  {
+   "rate": 0.3,
+   "family": "Cnom",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "k_targets": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "val_int": 15,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 15,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 13,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.3,
+   "family": "Cnom",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "k_targets": [
+    11,
+    12,
+    11,
+    11,
+    12
+   ],
+   "val_int": 15,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 15,
+   "80_rescue": 1,
+   "80_break": 0,
+   "80_grasp": 70,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 13,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.4,
+   "family": "B1",
+   "side": "lo",
+   "exact": false,
+   "train_counts": [
+    8,
+    13,
+    15,
+    11,
+    13
+   ],
+   "k_targets": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "val_int": 15,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 15,
+   "80_rescue": 2,
+   "80_break": 0,
+   "80_grasp": 71,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 13,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.4,
+   "family": "Bstar",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "k_targets": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "val_int": 19,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 19,
+   "80_rescue": 2,
+   "80_break": 0,
+   "80_grasp": 71,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 17,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.4,
+   "family": "Bstar",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "k_targets": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "val_int": 19,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 19,
+   "80_rescue": 2,
+   "80_break": 0,
+   "80_grasp": 71,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 17,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.4,
+   "family": "Cfit",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "k_targets": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "val_int": 20,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 20,
+   "80_rescue": 3,
+   "80_break": 0,
+   "80_grasp": 72,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 17,
+   "74_rescue": 1,
+   "74_break": 0,
+   "74_grasp": 68,
+   "74_task": 53
+  },
+  {
+   "rate": 0.4,
+   "family": "Cfit",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "k_targets": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "val_int": 20,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 20,
+   "80_rescue": 3,
+   "80_break": 0,
+   "80_grasp": 72,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 17,
+   "74_rescue": 1,
+   "74_break": 0,
+   "74_grasp": 68,
+   "74_task": 53
+  },
+  {
+   "rate": 0.4,
+   "family": "Cnom",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "k_targets": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "val_int": 18,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 18,
+   "80_rescue": 2,
+   "80_break": 0,
+   "80_grasp": 71,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 15,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.4,
+   "family": "Cnom",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "k_targets": [
+    15,
+    16,
+    15,
+    15,
+    16
+   ],
+   "val_int": 18,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 18,
+   "80_rescue": 2,
+   "80_break": 0,
+   "80_grasp": 71,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 15,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.5,
+   "family": "B1",
+   "side": "lo",
+   "exact": false,
+   "train_counts": [
+    8,
+    13,
+    15,
+    11,
+    13
+   ],
+   "k_targets": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "val_int": 15,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 15,
+   "80_rescue": 2,
+   "80_break": 0,
+   "80_grasp": 71,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 13,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 53
+  },
+  {
+   "rate": 0.5,
+   "family": "Bstar",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "k_targets": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "val_int": 24,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 24,
+   "80_rescue": 2,
+   "80_break": 1,
+   "80_grasp": 70,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 21,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 54
+  },
+  {
+   "rate": 0.5,
+   "family": "Bstar",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "k_targets": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "val_int": 24,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 24,
+   "80_rescue": 2,
+   "80_break": 1,
+   "80_grasp": 70,
+   "80_task": 56,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 21,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 54
+  },
+  {
+   "rate": 0.5,
+   "family": "Cfit",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "k_targets": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "val_int": 24,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 24,
+   "80_rescue": 4,
+   "80_break": 0,
+   "80_grasp": 73,
+   "80_task": 58,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 20,
+   "74_rescue": 1,
+   "74_break": 0,
+   "74_grasp": 68,
+   "74_task": 54
+  },
+  {
+   "rate": 0.5,
+   "family": "Cfit",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "k_targets": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "val_int": 24,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 24,
+   "80_rescue": 4,
+   "80_break": 0,
+   "80_grasp": 73,
+   "80_task": 58,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 20,
+   "74_rescue": 1,
+   "74_break": 0,
+   "74_grasp": 68,
+   "74_task": 54
+  },
+  {
+   "rate": 0.5,
+   "family": "Cnom",
+   "side": "lo",
+   "exact": true,
+   "train_counts": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "k_targets": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "val_int": 24,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 24,
+   "80_rescue": 2,
+   "80_break": 0,
+   "80_grasp": 71,
+   "80_task": 57,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 21,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 54
+  },
+  {
+   "rate": 0.5,
+   "family": "Cnom",
+   "side": "hi",
+   "exact": true,
+   "train_counts": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "k_targets": [
+    19,
+    20,
+    19,
+    19,
+    20
+   ],
+   "val_int": 24,
+   "80_N": 80,
+   "80_trig": 48,
+   "80_int": 24,
+   "80_rescue": 2,
+   "80_break": 0,
+   "80_grasp": 71,
+   "80_task": 57,
+   "74_N": 74,
+   "74_trig": 42,
+   "74_int": 21,
+   "74_rescue": 0,
+   "74_break": 0,
+   "74_grasp": 67,
+   "74_task": 54
+  }
+ ],
+ "item4": {
+  "fit": {
+   "n": 48,
+   "pred_near0": 9,
+   "meas_near0": 31,
+   "pred_gt2": 23,
+   "meas_gt2": 6,
+   "both_nonzero": 16,
+   "sign_concordant": 15,
+   "pred_gt2_meas_nonzero": 5,
+   "pred_gt2_concordant": 5,
+   "crosstab_pred_meas": {
+    "00": 8,
+    "+0": 20,
+    "++": 12,
+    "-0": 3,
+    "--": 3,
+    "-+": 1,
+    "0+": 1
+   },
+   "spearman": 0.35942249240121577,
+   "pearson": 0.13674112743213382,
+   "mae_mm": 1.5380572515402084
+  },
+  "nom": {
+   "n": 48,
+   "pred_near0": 2,
+   "meas_near0": 31,
+   "pred_gt2": 36,
+   "meas_gt2": 6,
+   "both_nonzero": 17,
+   "sign_concordant": 15,
+   "pred_gt2_meas_nonzero": 15,
+   "pred_gt2_concordant": 14,
+   "crosstab_pred_meas": {
+    "-0": 7,
+    "+0": 22,
+    "++": 12,
+    "00": 2,
+    "--": 3,
+    "-+": 2
+   },
+   "spearman": 0.28050369083803733,
+   "pearson": 0.15197427666158445,
+   "mae_mm": 4.874271036979377
+  }
+ },
+ "flips": [
+  {
+   "tag": "init10_trans_y",
+   "label": "rescue",
+   "dev6": true,
+   "fmid_recon": true,
+   "e_bx_mm": -18.6,
+   "e_by_mm": 29.1,
+   "pred_fit_mm": 3.36,
+   "pred_nom_mm": 8.78,
+   "meas_mm": -0.24,
+   "obj_move_a0_mm": 0.94,
+   "obj_move_a1_mm": 0.08,
+   "asrun_B": false,
+   "asrun_C": true,
+   "fix_Cnom": true
+  },
+  {
+   "tag": "init11_orig",
+   "label": "break",
+   "dev6": true,
+   "fmid_recon": true,
+   "e_bx_mm": 22.0,
+   "e_by_mm": 11.6,
+   "pred_fit_mm": -0.02,
+   "pred_nom_mm": 0.51,
+   "meas_mm": 0.03,
+   "obj_move_a0_mm": 0.0,
+   "obj_move_a1_mm": 0.0,
+   "asrun_B": false,
+   "asrun_C": false,
+   "fix_Cnom": false
+  },
+  {
+   "tag": "init15_rot",
+   "label": "rescue",
+   "dev6": false,
+   "fmid_recon": false,
+   "e_bx_mm": -15.3,
+   "e_by_mm": 35.3,
+   "pred_fit_mm": 2.78,
+   "pred_nom_mm": 4.86,
+   "meas_mm": 1.73,
+   "obj_move_a0_mm": 0.0,
+   "obj_move_a1_mm": 0.0,
+   "asrun_B": false,
+   "asrun_C": true,
+   "fix_Cnom": true
+  },
+  {
+   "tag": "init22_orig",
+   "label": "break",
+   "dev6": true,
+   "fmid_recon": true,
+   "e_bx_mm": -18.3,
+   "e_by_mm": -8.2,
+   "pred_fit_mm": -0.51,
+   "pred_nom_mm": -1.47,
+   "meas_mm": -0.56,
+   "obj_move_a0_mm": 0.0,
+   "obj_move_a1_mm": 0.0,
+   "asrun_B": false,
+   "asrun_C": false,
+   "fix_Cnom": false
+  },
+  {
+   "tag": "init24_trans_y",
+   "label": "rescue",
+   "dev6": true,
+   "fmid_recon": true,
+   "e_bx_mm": -34.0,
+   "e_by_mm": 22.9,
+   "pred_fit_mm": 3.68,
+   "pred_nom_mm": 6.75,
+   "meas_mm": 2.17,
+   "obj_move_a0_mm": 0.77,
+   "obj_move_a1_mm": 1.15,
+   "asrun_B": true,
+   "asrun_C": true,
+   "fix_Cnom": true
+  },
+  {
+   "tag": "init27_trans_y",
+   "label": "rescue",
+   "dev6": true,
+   "fmid_recon": true,
+   "e_bx_mm": -1.6,
+   "e_by_mm": 27.9,
+   "pred_fit_mm": 1.99,
+   "pred_nom_mm": 5.39,
+   "meas_mm": 0.47,
+   "obj_move_a0_mm": 0.35,
+   "obj_move_a1_mm": 0.31,
+   "asrun_B": false,
+   "asrun_C": false,
+   "fix_Cnom": true
+  }
+ ],
+ "pred_err_median_mm": {
+  "perr_fit_a0_mm": 1.9855048002192284,
+  "perr_fit_a1_mm": 2.2168068568604555,
+  "perr_nom_a0_mm": 4.593785270882023,
+  "perr_nom_a1_mm": 4.534109772839625
+ }
+}

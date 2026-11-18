@@ -1,0 +1,61 @@
+tag,init,cond,lock_step,lock_miss,diag,diag_ev,x_g,l_g,flip_g,x_t,l_t,flip_t,x_trig,l_trig
+init30_orig,30,orig,0,False,,,True,True,both_success,True,True,both_success,True,True
+init30_trans,30,trans,0,False,,,True,True,both_success,True,True,both_success,False,False
+init30_trans_y,30,trans_y,0,False,,,True,True,both_success,False,False,both_fail,True,True
+init31_orig,31,orig,0,False,,,True,True,both_success,True,True,both_success,True,True
+init31_trans,31,trans,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init31_trans_y,31,trans_y,0,False,,,True,True,both_success,True,True,both_success,True,True
+init32_orig,32,orig,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init32_trans,32,trans,0,False,,,False,False,both_fail,False,False,both_fail,False,False
+init32_trans_y,32,trans_y,0,False,,,True,True,both_success,True,True,both_success,True,True
+init33_orig,33,orig,0,False,undetermined,"{""lock_step"": 0, ""obj_move_mm"": 569.5, ""lock_err_mm"": 25.9, ""est_vs_lock_mm"": 108.9, ""live_late_err_mm"": 49.3, ""note"": ""moved+drift, follow unclear""}",False,True,break,False,True,break,True,True
+init33_trans,33,trans,0,False,tracked,"{""lock_step"": 0, ""obj_move_mm"": 7.7, ""lock_err_mm"": 11.0, ""est_vs_lock_mm"": 53.9, ""live_late_err_mm"": 9.9, ""post_move_err_mm"": 9.9}",True,False,rescue,True,False,rescue,True,True
+init33_trans_y,33,trans_y,0,False,undetermined,"{""lock_step"": 0, ""obj_move_mm"": 521.6, ""lock_err_mm"": 15.6, ""est_vs_lock_mm"": 102.8, ""live_late_err_mm"": 31.7, ""note"": ""moved+drift, follow unclear""}",True,True,both_success,True,False,rescue,True,True
+init34_orig,34,orig,0,False,,,True,True,both_success,False,False,both_fail,True,True
+init34_trans,34,trans,0,False,,,True,True,both_success,True,True,both_success,True,True
+init34_trans_y,34,trans_y,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init35_orig,35,orig,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init35_trans,35,trans,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init35_trans_y,35,trans_y,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init36_orig,36,orig,0,False,,,True,True,both_success,True,True,both_success,True,True
+init36_trans,36,trans,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init36_trans_y,36,trans_y,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init37_orig,37,orig,0,False,undetermined,"{""lock_step"": 0, ""obj_move_mm"": 211.1, ""lock_err_mm"": 14.4, ""est_vs_lock_mm"": 25.4, ""live_late_err_mm"": 15.4, ""note"": ""moved+drift, follow unclear""}",True,True,both_success,True,False,rescue,True,True
+init37_trans,37,trans,0,False,undetermined,"{""lock_step"": 0, ""obj_move_mm"": 33.9, ""lock_err_mm"": 31.2, ""est_vs_lock_mm"": 27.8, ""live_late_err_mm"": 28.0, ""post_move_err_mm"": 28.9, ""note"": ""moved+drift, follow unclear""}",True,False,rescue,True,False,rescue,True,True
+init37_trans_y,37,trans_y,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init38_orig,38,orig,0,False,,,True,True,both_success,True,True,both_success,True,True
+init38_trans,38,trans,0,False,,,True,True,both_success,True,True,both_success,True,True
+init38_trans_y,38,trans_y,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init39_orig,39,orig,0,False,undetermined,"{""lock_step"": 0, ""obj_move_mm"": 15.4, ""lock_err_mm"": 11.2, ""est_vs_lock_mm"": 19.7, ""live_late_err_mm"": 11.8, ""post_move_err_mm"": 11.8, ""note"": ""moved+drift, follow unclear""}",True,False,rescue,False,False,both_fail,True,True
+init39_trans,39,trans,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init39_trans_y,39,trans_y,0,False,,,True,True,both_success,True,True,both_success,False,False
+init40_orig,40,orig,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init40_trans,40,trans,0,False,undetermined,"{""lock_step"": 0, ""obj_move_mm"": 42.0, ""lock_err_mm"": 19.5, ""est_vs_lock_mm"": 43.8, ""live_late_err_mm"": 26.8, ""post_move_err_mm"": 32.1, ""note"": ""moved+drift, follow unclear""}",True,False,rescue,False,False,both_fail,True,True
+init40_trans_y,40,trans_y,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init41_orig,41,orig,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init41_trans,41,trans,0,False,,,True,True,both_success,False,False,both_fail,True,True
+init41_trans_y,41,trans_y,0,False,,,True,True,both_success,True,True,both_success,False,False
+init42_orig,42,orig,0,False,undetermined,"{""lock_step"": 0, ""obj_move_mm"": 6.9, ""lock_err_mm"": 18.0, ""est_vs_lock_mm"": 63.9, ""live_late_err_mm"": 18.2, ""post_move_err_mm"": 18.2, ""note"": ""moved+drift, follow unclear""}",True,False,rescue,False,False,both_fail,True,True
+init42_trans,42,trans,0,False,,,True,True,both_success,True,True,both_success,True,True
+init42_trans_y,42,trans_y,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init43_orig,43,orig,0,False,,,True,True,both_success,True,True,both_success,True,True
+init43_trans,43,trans,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init43_trans_y,43,trans_y,0,False,undetermined,"{""lock_step"": 0, ""obj_move_mm"": 453.8, ""lock_err_mm"": 12.2, ""est_vs_lock_mm"": 64.7, ""live_late_err_mm"": 15.1, ""note"": ""moved+drift, follow unclear""}",False,True,break,False,True,break,True,True
+init44_orig,44,orig,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init44_trans,44,trans,0,False,,,True,True,both_success,False,False,both_fail,True,True
+init44_trans_y,44,trans_y,,True,,,False,False,both_fail,False,False,both_fail,False,False
+init45_orig,45,orig,0,False,,,True,True,both_success,True,True,both_success,True,True
+init45_trans,45,trans,0,False,,,True,True,both_success,True,True,both_success,True,True
+init45_trans_y,45,trans_y,0,False,tracked,"{""lock_step"": 0, ""obj_move_mm"": 6.0, ""lock_err_mm"": 9.4, ""est_vs_lock_mm"": 18.5, ""live_late_err_mm"": 8.4, ""post_move_err_mm"": 8.6}",True,False,rescue,False,False,both_fail,True,True
+init46_orig,46,orig,0,False,,,True,True,both_success,False,False,both_fail,True,True
+init46_trans,46,trans,0,False,,,False,False,both_fail,False,False,both_fail,True,True
+init46_trans_y,46,trans_y,0,False,,,True,True,both_success,True,True,both_success,True,True
+init47_orig,47,orig,0,False,,,True,True,both_success,True,True,both_success,True,True
+init47_trans,47,trans,0,False,,,True,True,both_success,True,True,both_success,True,True
+init47_trans_y,47,trans_y,0,False,,,True,True,both_success,True,True,both_success,True,True
+init48_orig,48,orig,0,False,undetermined,"{""lock_step"": 0, ""obj_move_mm"": 11.3, ""lock_err_mm"": 30.6, ""est_vs_lock_mm"": 49.3, ""live_late_err_mm"": 33.6, ""post_move_err_mm"": 33.6, ""note"": ""moved+drift, follow unclear""}",True,False,rescue,False,False,both_fail,True,True
+init48_trans,48,trans,0,False,,,True,True,both_success,True,True,both_success,False,False
+init48_trans_y,48,trans_y,0,False,undetermined,"{""lock_step"": 0, ""obj_move_mm"": 503.8, ""lock_err_mm"": 15.6, ""est_vs_lock_mm"": 81.4, ""live_late_err_mm"": 42.5, ""note"": ""moved+drift, follow unclear""}",False,True,break,False,False,both_fail,True,True
+init49_orig,49,orig,0,False,,,True,True,both_success,True,True,both_success,True,True
+init49_trans,49,trans,0,False,,,True,True,both_success,True,True,both_success,False,False
+init49_trans_y,49,trans_y,0,False,,,True,True,both_success,False,False,both_fail,True,True

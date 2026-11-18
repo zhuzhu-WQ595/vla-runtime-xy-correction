@@ -1,0 +1,700 @@
+{
+ "main": {
+  "butter:ALL": {
+   "n": 80,
+   "grasp": {
+    "v": 54,
+    "g": 73,
+    "x": 65,
+    "oracle_rescued": 20,
+    "kept": 11,
+    "lost": [
+     "init34_trans",
+     "init36_trans_y",
+     "init37_trans",
+     "init37_trans_y",
+     "init41_trans_y",
+     "init43_trans_y",
+     "init45_trans_y",
+     "init46_trans_y",
+     "init47_trans_y"
+    ],
+    "new": [
+     "init36_rot"
+    ],
+    "x_broke": [
+     "init38_trans_y"
+    ],
+    "g_broke": [
+     "init47_trans"
+    ]
+   },
+   "task": {
+    "v": 50,
+    "g": 58,
+    "x": 57,
+    "oracle_rescued": 15,
+    "kept": 8,
+    "lost": [
+     "init31_trans_y",
+     "init36_trans_y",
+     "init37_trans_y",
+     "init41_trans_y",
+     "init43_trans_y",
+     "init45_trans_y",
+     "init47_trans_y"
+    ],
+    "new": [
+     "init30_trans",
+     "init30_trans_y",
+     "init36_rot"
+    ],
+    "x_broke": [
+     "init30_rot",
+     "init35_trans_y",
+     "init38_trans_y",
+     "init44_orig"
+    ]
+   },
+   "break_rate_grasp": 0.018518518518518517,
+   "break_rate_task": 0.08
+  },
+  "butter:TRANS": {
+   "n": 40,
+   "grasp": {
+    "v": 21,
+    "g": 35,
+    "x": 26,
+    "oracle_rescued": 15,
+    "kept": 6,
+    "lost": [
+     "init34_trans",
+     "init36_trans_y",
+     "init37_trans",
+     "init37_trans_y",
+     "init41_trans_y",
+     "init43_trans_y",
+     "init45_trans_y",
+     "init46_trans_y",
+     "init47_trans_y"
+    ],
+    "new": [],
+    "x_broke": [
+     "init38_trans_y"
+    ],
+    "g_broke": [
+     "init47_trans"
+    ]
+   },
+   "task": {
+    "v": 18,
+    "g": 22,
+    "x": 21,
+    "oracle_rescued": 10,
+    "kept": 3,
+    "lost": [
+     "init31_trans_y",
+     "init36_trans_y",
+     "init37_trans_y",
+     "init41_trans_y",
+     "init43_trans_y",
+     "init45_trans_y",
+     "init47_trans_y"
+    ],
+    "new": [
+     "init30_trans",
+     "init30_trans_y"
+    ],
+    "x_broke": [
+     "init35_trans_y",
+     "init38_trans_y"
+    ]
+   },
+   "break_rate_grasp": 0.047619047619047616,
+   "break_rate_task": 0.1111111111111111
+  },
+  "milk:ALL": {
+   "n": 80,
+   "grasp": {
+    "v": 50,
+    "g": 59,
+    "x": 60,
+    "oracle_rescued": 10,
+    "kept": 5,
+    "lost": [
+     "init06_trans_y",
+     "init12_trans",
+     "init12_trans_y",
+     "init16_trans",
+     "init18_trans_y"
+    ],
+    "new": [
+     "init04_rot",
+     "init05_trans",
+     "init09_trans_y",
+     "init10_trans",
+     "init11_trans_y",
+     "init13_trans_y",
+     "init15_trans"
+    ],
+    "x_broke": [
+     "init02_rot",
+     "init17_trans"
+    ],
+    "g_broke": [
+     "init05_rot"
+    ]
+   },
+   "task": {
+    "v": 42,
+    "g": 43,
+    "x": 46,
+    "oracle_rescued": 5,
+    "kept": 2,
+    "lost": [
+     "init02_rot",
+     "init04_trans",
+     "init12_trans"
+    ],
+    "new": [
+     "init05_rot",
+     "init13_trans_y",
+     "init15_trans",
+     "init18_trans"
+    ],
+    "x_broke": [
+     "init01_trans",
+     "init14_trans"
+    ]
+   },
+   "break_rate_grasp": 0.04,
+   "break_rate_task": 0.047619047619047616
+  },
+  "milk:TRANS": {
+   "n": 40,
+   "grasp": {
+    "v": 14,
+    "g": 24,
+    "x": 24,
+    "oracle_rescued": 10,
+    "kept": 5,
+    "lost": [
+     "init06_trans_y",
+     "init12_trans",
+     "init12_trans_y",
+     "init16_trans",
+     "init18_trans_y"
+    ],
+    "new": [
+     "init05_trans",
+     "init09_trans_y",
+     "init10_trans",
+     "init11_trans_y",
+     "init13_trans_y",
+     "init15_trans"
+    ],
+    "x_broke": [
+     "init17_trans"
+    ],
+    "g_broke": []
+   },
+   "task": {
+    "v": 11,
+    "g": 13,
+    "x": 14,
+    "oracle_rescued": 4,
+    "kept": 2,
+    "lost": [
+     "init04_trans",
+     "init12_trans"
+    ],
+    "new": [
+     "init13_trans_y",
+     "init15_trans",
+     "init18_trans"
+    ],
+    "x_broke": [
+     "init01_trans",
+     "init14_trans"
+    ]
+   },
+   "break_rate_grasp": 0.07142857142857142,
+   "break_rate_task": 0.18181818181818182
+  }
+ },
+ "ci": {
+  "butter": {
+   "x-v_g": [
+    0.138,
+    0.062,
+    0.212
+   ],
+   "x-g_g": [
+    -0.1,
+    -0.163,
+    -0.037
+   ],
+   "x-v_t": [
+    0.087,
+    0.025,
+    0.163
+   ],
+   "x-g_t": [
+    -0.013,
+    -0.087,
+    0.05
+   ]
+  },
+  "milk": {
+   "x-v_g": [
+    0.125,
+    0.037,
+    0.212
+   ],
+   "x-g_g": [
+    0.013,
+    -0.087,
+    0.113
+   ],
+   "x-v_t": [
+    0.05,
+    -0.013,
+    0.113
+   ],
+   "x-g_t": [
+    0.037,
+    -0.05,
+    0.125
+   ]
+  }
+ },
+ "cases": {
+  "butter_trans_y_lost": [
+   {
+    "tag": "init36_trans_y",
+    "t0": 52,
+    "tdiv_5mm": 64,
+    "tdiv_2mm": 64,
+    "prefix": {
+     "fresh_exy_med": 0.008554362053332593,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": 4.522581391887617e-06,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": null,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.010210294504528225,
+     "steps": 228
+    },
+    "t_gfirst": 52,
+    "t_vfirst": 52,
+    "dxy_at_div": 0.7840999754251468
+   },
+   {
+    "tag": "init37_trans_y",
+    "t0": 46,
+    "tdiv_5mm": 63,
+    "tdiv_2mm": 63,
+    "prefix": {
+     "fresh_exy_med": 0.006325439352017372,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": 4.522581391887617e-06,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": 211,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.012050226204976913,
+     "steps": 165
+    },
+    "t_gfirst": 46,
+    "t_vfirst": 46,
+    "dxy_at_div": 0.40930217564078175
+   },
+   {
+    "tag": "init41_trans_y",
+    "t0": 46,
+    "tdiv_5mm": 56,
+    "tdiv_2mm": 56,
+    "prefix": {
+     "fresh_exy_med": 0.00801680596792789,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": 4.522581391887617e-06,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": 240,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.00200456198466287,
+     "steps": 194
+    },
+    "t_gfirst": 46,
+    "t_vfirst": 46,
+    "dxy_at_div": 0.9825356954123505
+   },
+   {
+    "tag": "init43_trans_y",
+    "t0": 50,
+    "tdiv_5mm": 56,
+    "tdiv_2mm": 55,
+    "prefix": {
+     "fresh_exy_med": 0.007380182366424759,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": 4.522581391887617e-06,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": null,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.012185109689376444,
+     "steps": 230
+    },
+    "t_gfirst": 50,
+    "t_vfirst": 50,
+    "dxy_at_div": 0.4609315887551064
+   },
+   {
+    "tag": "init45_trans_y",
+    "t0": 44,
+    "tdiv_5mm": 55,
+    "tdiv_2mm": 49,
+    "prefix": {
+     "fresh_exy_med": 0.007572589614429349,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": 4.522581391887617e-06,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": null,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.01698882419218728,
+     "steps": 236
+    },
+    "t_gfirst": 44,
+    "t_vfirst": 44,
+    "dxy_at_div": 0.5379454737273844
+   },
+   {
+    "tag": "init46_trans_y",
+    "t0": 49,
+    "tdiv_5mm": 59,
+    "tdiv_2mm": 59,
+    "prefix": {
+     "fresh_exy_med": 0.007055162142900291,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": 4.522581391887617e-06,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": null,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.00454720903127398,
+     "steps": 231
+    },
+    "t_gfirst": 49,
+    "t_vfirst": 49,
+    "dxy_at_div": 0.8847959277816594
+   },
+   {
+    "tag": "init47_trans_y",
+    "t0": 55,
+    "tdiv_5mm": 63,
+    "tdiv_2mm": 61,
+    "prefix": {
+     "fresh_exy_med": 0.006494286548777578,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": 4.522581391887617e-06,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": 110,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.01488064276858652,
+     "steps": 82
+    },
+    "t_gfirst": 55,
+    "t_vfirst": 55,
+    "dxy_at_div": 0.7320897986286355
+   }
+  ],
+  "butter_trans_lost": [
+   {
+    "tag": "init34_trans",
+    "t0": 54,
+    "tdiv_5mm": 54,
+    "tdiv_2mm": 54,
+    "prefix": {
+     "fresh_exy_med": 0.0164714572424589,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": 4.522581391887617e-06,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": null,
+    "miss_before_div": false,
+    "cause": "触发时机不同",
+    "post": {
+     "exy_med": 0.011090396478307937,
+     "steps": 226
+    },
+    "t_gfirst": 54,
+    "t_vfirst": null,
+    "dxy_at_div": 0.9987598984139376
+   },
+   {
+    "tag": "init37_trans",
+    "t0": 49,
+    "tdiv_5mm": 49,
+    "tdiv_2mm": 49,
+    "prefix": {
+     "fresh_exy_med": 0.015075090850364455,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": 4.522581391887617e-06,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": null,
+    "miss_before_div": false,
+    "cause": "触发时机不同",
+    "post": {
+     "exy_med": 0.009248550374147287,
+     "steps": 231
+    },
+    "t_gfirst": 49,
+    "t_vfirst": null,
+    "dxy_at_div": 0.9539026202263317
+   }
+  ],
+  "milk_miss": [
+   {
+    "tag": "init02_rot",
+    "t0": 69,
+    "tdiv_5mm": 96,
+    "tdiv_2mm": 83,
+    "prefix": {
+     "fresh_exy_med": 0.0019695252234113924,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": -3.547730149788819e-05,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": 86,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.005794545355822325,
+     "steps": 17
+    },
+    "t_gfirst": 69,
+    "t_vfirst": 69,
+    "dxy_at_div": 0.4108578662240376
+   },
+   {
+    "tag": "init05_rot",
+    "t0": 69,
+    "tdiv_5mm": 99,
+    "tdiv_2mm": 80,
+    "prefix": {
+     "fresh_exy_med": 0.0032671732871939977,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": -3.547730149790207e-05,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": 150,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.0026895879814458385,
+     "steps": 81
+    },
+    "t_gfirst": 69,
+    "t_vfirst": 69,
+    "dxy_at_div": 0.5057773169349222
+   },
+   {
+    "tag": "init06_trans_y",
+    "t0": 48,
+    "tdiv_5mm": 82,
+    "tdiv_2mm": 82,
+    "prefix": {
+     "fresh_exy_med": 0.0012957662854345756,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": -3.54773014979437e-05,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": 82,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.030911334041257413,
+     "steps": 213
+    },
+    "t_gfirst": 48,
+    "t_vfirst": 48,
+    "dxy_at_div": 0.4060887976811855
+   },
+   {
+    "tag": "init09_trans_y",
+    "t0": 37,
+    "tdiv_5mm": 73,
+    "tdiv_2mm": 55,
+    "prefix": {
+     "fresh_exy_med": 0.0016159153342169595,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": -3.54773014979437e-05,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": 55,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.02202750411469912,
+     "steps": 70
+    },
+    "t_gfirst": 37,
+    "t_vfirst": 37,
+    "dxy_at_div": 0.8835985068127749
+   },
+   {
+    "tag": "init11_trans_y",
+    "t0": 39,
+    "tdiv_5mm": 39,
+    "tdiv_2mm": 39,
+    "prefix": {
+     "fresh_exy_med": null,
+     "held_exy_med": null,
+     "miss_steps": 39,
+     "held_steps": 0,
+     "ez_med": null,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": 0,
+    "miss_before_div": true,
+    "cause": "漏检/回退",
+    "post": {
+     "exy_med": 0.03312346694587408,
+     "steps": 32
+    },
+    "t_gfirst": 39,
+    "t_vfirst": 41,
+    "dxy_at_div": 0.4368819529985152
+   },
+   {
+    "tag": "init12_trans_y",
+    "t0": 37,
+    "tdiv_5mm": 60,
+    "tdiv_2mm": 59,
+    "prefix": {
+     "fresh_exy_med": 0.0046258389722018565,
+     "held_exy_med": null,
+     "miss_steps": 0,
+     "held_steps": 0,
+     "ez_med": -3.54773014979437e-05,
+     "g_active": 0,
+     "v_active": 0
+    },
+    "first_miss": 59,
+    "miss_before_div": false,
+    "cause": "均触发但修正向量不同",
+    "post": {
+     "exy_med": 0.0035224707990322173,
+     "steps": 35
+    },
+    "t_gfirst": 37,
+    "t_vfirst": 37,
+    "dxy_at_div": 0.5231897261646741
+   }
+  ]
+ },
+ "ci_trans": {
+  "butter": {
+   "x-v_g": [
+    0.125,
+    0.0,
+    0.275
+   ],
+   "x-g_g": [
+    -0.225,
+    -0.35,
+    -0.1
+   ],
+   "x-v_t": [
+    0.075,
+    -0.05,
+    0.225
+   ],
+   "x-g_t": [
+    -0.025,
+    -0.2,
+    0.175
+   ]
+  },
+  "milk": {
+   "x-v_g": [
+    0.25,
+    0.075,
+    0.425
+   ],
+   "x-g_g": [
+    0.0,
+    -0.175,
+    0.175
+   ],
+   "x-v_t": [
+    0.075,
+    -0.05,
+    0.2
+   ],
+   "x-g_t": [
+    0.025,
+    -0.1,
+    0.175
+   ]
+  }
+ }
+}

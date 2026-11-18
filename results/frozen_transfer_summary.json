@@ -1,0 +1,1263 @@
+{
+ "manifest_frozen_at": "2026-11-16T19:20:29",
+ "butter": {
+  "label": "新位置验证（基底 init30-49 的机器人/场景配置；目标 XY 由 butter_newpos.json 覆盖，均距 50 个原 init 位置 >=1.5cm）",
+  "n_states": 60,
+  "missing": [],
+  "by": {
+   "orig": {
+    "g": {
+     "n": 20,
+     "vanilla": 8,
+     "oracle": 15,
+     "visual": 14,
+     "x_rescue": [
+      "init34_orig",
+      "init36_orig",
+      "init37_orig",
+      "init39_orig",
+      "init42_orig",
+      "init46_orig",
+      "init47_orig"
+     ],
+     "x_break": [
+      "init32_orig"
+     ],
+     "g_rescue": [
+      "init33_orig",
+      "init34_orig",
+      "init35_orig",
+      "init36_orig",
+      "init37_orig",
+      "init42_orig",
+      "init46_orig",
+      "init47_orig"
+     ],
+     "g_break": [
+      "init32_orig"
+     ],
+     "rescue_denom": 12,
+     "break_denom": 8,
+     "oracle_kept": [
+      "init34_orig",
+      "init36_orig",
+      "init37_orig",
+      "init42_orig",
+      "init46_orig",
+      "init47_orig"
+     ],
+     "oracle_lost": [
+      "init33_orig",
+      "init35_orig"
+     ],
+     "visual_only_rescue": [
+      "init39_orig"
+     ],
+     "oracle_retention": 0.75,
+     "ci_x_minus_v": [
+      0.3,
+      0.05,
+      0.55
+     ],
+     "ci_x_minus_g": [
+      -0.05,
+      -0.2,
+      0.1
+     ],
+     "ci_g_minus_v": [
+      0.35,
+      0.1,
+      0.6
+     ]
+    },
+    "t": {
+     "n": 20,
+     "vanilla": 7,
+     "oracle": 10,
+     "visual": 9,
+     "x_rescue": [
+      "init36_orig",
+      "init37_orig",
+      "init47_orig"
+     ],
+     "x_break": [
+      "init48_orig"
+     ],
+     "g_rescue": [
+      "init35_orig",
+      "init36_orig",
+      "init37_orig",
+      "init46_orig",
+      "init47_orig"
+     ],
+     "g_break": [
+      "init30_orig",
+      "init48_orig"
+     ],
+     "rescue_denom": 13,
+     "break_denom": 7,
+     "oracle_kept": [
+      "init36_orig",
+      "init37_orig",
+      "init47_orig"
+     ],
+     "oracle_lost": [
+      "init35_orig",
+      "init46_orig"
+     ],
+     "visual_only_rescue": [],
+     "oracle_retention": 0.6,
+     "ci_x_minus_v": [
+      0.1,
+      -0.1,
+      0.3
+     ],
+     "ci_x_minus_g": [
+      -0.05,
+      -0.2,
+      0.1
+     ],
+     "ci_g_minus_v": [
+      0.15,
+      -0.1,
+      0.4
+     ]
+    }
+   },
+   "trans": {
+    "g": {
+     "n": 20,
+     "vanilla": 6,
+     "oracle": 17,
+     "visual": 13,
+     "x_rescue": [
+      "init33_trans",
+      "init34_trans",
+      "init37_trans",
+      "init40_trans",
+      "init41_trans",
+      "init45_trans",
+      "init47_trans"
+     ],
+     "x_break": [],
+     "g_rescue": [
+      "init33_trans",
+      "init34_trans",
+      "init35_trans",
+      "init36_trans",
+      "init37_trans",
+      "init39_trans",
+      "init40_trans",
+      "init41_trans",
+      "init43_trans",
+      "init45_trans",
+      "init47_trans"
+     ],
+     "g_break": [],
+     "rescue_denom": 14,
+     "break_denom": 6,
+     "oracle_kept": [
+      "init33_trans",
+      "init34_trans",
+      "init37_trans",
+      "init40_trans",
+      "init41_trans",
+      "init45_trans",
+      "init47_trans"
+     ],
+     "oracle_lost": [
+      "init35_trans",
+      "init36_trans",
+      "init39_trans",
+      "init43_trans"
+     ],
+     "visual_only_rescue": [],
+     "oracle_retention": 0.636,
+     "ci_x_minus_v": [
+      0.35,
+      0.15,
+      0.55
+     ],
+     "ci_x_minus_g": [
+      -0.2,
+      -0.4,
+      -0.05
+     ],
+     "ci_g_minus_v": [
+      0.55,
+      0.35,
+      0.75
+     ]
+    },
+    "t": {
+     "n": 20,
+     "vanilla": 6,
+     "oracle": 10,
+     "visual": 10,
+     "x_rescue": [
+      "init33_trans",
+      "init34_trans",
+      "init37_trans",
+      "init45_trans",
+      "init47_trans"
+     ],
+     "x_break": [
+      "init44_trans"
+     ],
+     "g_rescue": [
+      "init33_trans",
+      "init34_trans",
+      "init35_trans",
+      "init40_trans",
+      "init45_trans",
+      "init47_trans"
+     ],
+     "g_break": [
+      "init44_trans",
+      "init49_trans"
+     ],
+     "rescue_denom": 14,
+     "break_denom": 6,
+     "oracle_kept": [
+      "init33_trans",
+      "init34_trans",
+      "init45_trans",
+      "init47_trans"
+     ],
+     "oracle_lost": [
+      "init35_trans",
+      "init40_trans"
+     ],
+     "visual_only_rescue": [
+      "init37_trans"
+     ],
+     "oracle_retention": 0.667,
+     "ci_x_minus_v": [
+      0.2,
+      -0.05,
+      0.45
+     ],
+     "ci_x_minus_g": [
+      0.0,
+      -0.2,
+      0.2
+     ],
+     "ci_g_minus_v": [
+      0.2,
+      -0.05,
+      0.45
+     ]
+    }
+   },
+   "trans_y": {
+    "g": {
+     "n": 20,
+     "vanilla": 7,
+     "oracle": 12,
+     "visual": 10,
+     "x_rescue": [
+      "init32_trans_y",
+      "init45_trans_y",
+      "init49_trans_y"
+     ],
+     "x_break": [],
+     "g_rescue": [
+      "init32_trans_y",
+      "init36_trans_y",
+      "init42_trans_y",
+      "init43_trans_y",
+      "init49_trans_y"
+     ],
+     "g_break": [],
+     "rescue_denom": 13,
+     "break_denom": 7,
+     "oracle_kept": [
+      "init32_trans_y",
+      "init49_trans_y"
+     ],
+     "oracle_lost": [
+      "init36_trans_y",
+      "init42_trans_y",
+      "init43_trans_y"
+     ],
+     "visual_only_rescue": [
+      "init45_trans_y"
+     ],
+     "oracle_retention": 0.4,
+     "ci_x_minus_v": [
+      0.15,
+      0.0,
+      0.35
+     ],
+     "ci_x_minus_g": [
+      -0.1,
+      -0.3,
+      0.1
+     ],
+     "ci_g_minus_v": [
+      0.25,
+      0.05,
+      0.45
+     ]
+    },
+    "t": {
+     "n": 20,
+     "vanilla": 5,
+     "oracle": 7,
+     "visual": 7,
+     "x_rescue": [
+      "init32_trans_y",
+      "init33_trans_y"
+     ],
+     "x_break": [],
+     "g_rescue": [
+      "init32_trans_y",
+      "init36_trans_y"
+     ],
+     "g_break": [],
+     "rescue_denom": 15,
+     "break_denom": 5,
+     "oracle_kept": [
+      "init32_trans_y"
+     ],
+     "oracle_lost": [
+      "init36_trans_y"
+     ],
+     "visual_only_rescue": [
+      "init33_trans_y"
+     ],
+     "oracle_retention": 0.5,
+     "ci_x_minus_v": [
+      0.1,
+      0.0,
+      0.25
+     ],
+     "ci_x_minus_g": [
+      0.0,
+      -0.15,
+      0.15
+     ],
+     "ci_g_minus_v": [
+      0.1,
+      0.0,
+      0.25
+     ]
+    }
+   },
+   "trans+trans_y": {
+    "g": {
+     "n": 40,
+     "vanilla": 13,
+     "oracle": 29,
+     "visual": 23,
+     "x_rescue": [
+      "init32_trans_y",
+      "init33_trans",
+      "init34_trans",
+      "init37_trans",
+      "init40_trans",
+      "init41_trans",
+      "init45_trans",
+      "init45_trans_y",
+      "init47_trans",
+      "init49_trans_y"
+     ],
+     "x_break": [],
+     "g_rescue": [
+      "init32_trans_y",
+      "init33_trans",
+      "init34_trans",
+      "init35_trans",
+      "init36_trans",
+      "init36_trans_y",
+      "init37_trans",
+      "init39_trans",
+      "init40_trans",
+      "init41_trans",
+      "init42_trans_y",
+      "init43_trans",
+      "init43_trans_y",
+      "init45_trans",
+      "init47_trans",
+      "init49_trans_y"
+     ],
+     "g_break": [],
+     "rescue_denom": 27,
+     "break_denom": 13,
+     "oracle_kept": [
+      "init32_trans_y",
+      "init33_trans",
+      "init34_trans",
+      "init37_trans",
+      "init40_trans",
+      "init41_trans",
+      "init45_trans",
+      "init47_trans",
+      "init49_trans_y"
+     ],
+     "oracle_lost": [
+      "init35_trans",
+      "init36_trans",
+      "init36_trans_y",
+      "init39_trans",
+      "init42_trans_y",
+      "init43_trans",
+      "init43_trans_y"
+     ],
+     "visual_only_rescue": [
+      "init45_trans_y"
+     ],
+     "oracle_retention": 0.562,
+     "ci_x_minus_v": [
+      0.25,
+      0.125,
+      0.375
+     ],
+     "ci_x_minus_g": [
+      -0.15,
+      -0.325,
+      0.0
+     ],
+     "ci_g_minus_v": [
+      0.4,
+      0.275,
+      0.525
+     ]
+    },
+    "t": {
+     "n": 40,
+     "vanilla": 11,
+     "oracle": 17,
+     "visual": 17,
+     "x_rescue": [
+      "init32_trans_y",
+      "init33_trans",
+      "init33_trans_y",
+      "init34_trans",
+      "init37_trans",
+      "init45_trans",
+      "init47_trans"
+     ],
+     "x_break": [
+      "init44_trans"
+     ],
+     "g_rescue": [
+      "init32_trans_y",
+      "init33_trans",
+      "init34_trans",
+      "init35_trans",
+      "init36_trans_y",
+      "init40_trans",
+      "init45_trans",
+      "init47_trans"
+     ],
+     "g_break": [
+      "init44_trans",
+      "init49_trans"
+     ],
+     "rescue_denom": 29,
+     "break_denom": 11,
+     "oracle_kept": [
+      "init32_trans_y",
+      "init33_trans",
+      "init34_trans",
+      "init45_trans",
+      "init47_trans"
+     ],
+     "oracle_lost": [
+      "init35_trans",
+      "init36_trans_y",
+      "init40_trans"
+     ],
+     "visual_only_rescue": [
+      "init33_trans_y",
+      "init37_trans"
+     ],
+     "oracle_retention": 0.625,
+     "ci_x_minus_v": [
+      0.15,
+      0.025,
+      0.3
+     ],
+     "ci_x_minus_g": [
+      0.0,
+      -0.1,
+      0.125
+     ],
+     "ci_g_minus_v": [
+      0.15,
+      0.0,
+      0.275
+     ]
+    }
+   },
+   "ALL": {
+    "g": {
+     "n": 60,
+     "vanilla": 21,
+     "oracle": 44,
+     "visual": 37,
+     "x_rescue": [
+      "init32_trans_y",
+      "init33_trans",
+      "init34_orig",
+      "init34_trans",
+      "init36_orig",
+      "init37_orig",
+      "init37_trans",
+      "init39_orig",
+      "init40_trans",
+      "init41_trans",
+      "init42_orig",
+      "init45_trans",
+      "init45_trans_y",
+      "init46_orig",
+      "init47_orig",
+      "init47_trans",
+      "init49_trans_y"
+     ],
+     "x_break": [
+      "init32_orig"
+     ],
+     "g_rescue": [
+      "init32_trans_y",
+      "init33_orig",
+      "init33_trans",
+      "init34_orig",
+      "init34_trans",
+      "init35_orig",
+      "init35_trans",
+      "init36_orig",
+      "init36_trans",
+      "init36_trans_y",
+      "init37_orig",
+      "init37_trans",
+      "init39_trans",
+      "init40_trans",
+      "init41_trans",
+      "init42_orig",
+      "init42_trans_y",
+      "init43_trans",
+      "init43_trans_y",
+      "init45_trans",
+      "init46_orig",
+      "init47_orig",
+      "init47_trans",
+      "init49_trans_y"
+     ],
+     "g_break": [
+      "init32_orig"
+     ],
+     "rescue_denom": 39,
+     "break_denom": 21,
+     "oracle_kept": [
+      "init32_trans_y",
+      "init33_trans",
+      "init34_orig",
+      "init34_trans",
+      "init36_orig",
+      "init37_orig",
+      "init37_trans",
+      "init40_trans",
+      "init41_trans",
+      "init42_orig",
+      "init45_trans",
+      "init46_orig",
+      "init47_orig",
+      "init47_trans",
+      "init49_trans_y"
+     ],
+     "oracle_lost": [
+      "init33_orig",
+      "init35_orig",
+      "init35_trans",
+      "init36_trans",
+      "init36_trans_y",
+      "init39_trans",
+      "init42_trans_y",
+      "init43_trans",
+      "init43_trans_y"
+     ],
+     "visual_only_rescue": [
+      "init39_orig",
+      "init45_trans_y"
+     ],
+     "oracle_retention": 0.625,
+     "ci_x_minus_v": [
+      0.267,
+      0.167,
+      0.383
+     ],
+     "ci_x_minus_g": [
+      -0.117,
+      -0.25,
+      -0.017
+     ],
+     "ci_g_minus_v": [
+      0.383,
+      0.25,
+      0.517
+     ]
+    },
+    "t": {
+     "n": 60,
+     "vanilla": 18,
+     "oracle": 27,
+     "visual": 26,
+     "x_rescue": [
+      "init32_trans_y",
+      "init33_trans",
+      "init33_trans_y",
+      "init34_trans",
+      "init36_orig",
+      "init37_orig",
+      "init37_trans",
+      "init45_trans",
+      "init47_orig",
+      "init47_trans"
+     ],
+     "x_break": [
+      "init44_trans",
+      "init48_orig"
+     ],
+     "g_rescue": [
+      "init32_trans_y",
+      "init33_trans",
+      "init34_trans",
+      "init35_orig",
+      "init35_trans",
+      "init36_orig",
+      "init36_trans_y",
+      "init37_orig",
+      "init40_trans",
+      "init45_trans",
+      "init46_orig",
+      "init47_orig",
+      "init47_trans"
+     ],
+     "g_break": [
+      "init30_orig",
+      "init44_trans",
+      "init48_orig",
+      "init49_trans"
+     ],
+     "rescue_denom": 42,
+     "break_denom": 18,
+     "oracle_kept": [
+      "init32_trans_y",
+      "init33_trans",
+      "init34_trans",
+      "init36_orig",
+      "init37_orig",
+      "init45_trans",
+      "init47_orig",
+      "init47_trans"
+     ],
+     "oracle_lost": [
+      "init35_orig",
+      "init35_trans",
+      "init36_trans_y",
+      "init40_trans",
+      "init46_orig"
+     ],
+     "visual_only_rescue": [
+      "init33_trans_y",
+      "init37_trans"
+     ],
+     "oracle_retention": 0.615,
+     "ci_x_minus_v": [
+      0.133,
+      0.017,
+      0.267
+     ],
+     "ci_x_minus_g": [
+      -0.017,
+      -0.133,
+      0.083
+     ],
+     "ci_g_minus_v": [
+      0.15,
+      0.0,
+      0.283
+     ]
+    }
+   }
+  },
+  "vision": {
+   "miss_prelift_mean": 0.085,
+   "exy_mm_prelift_median": 12.91
+  }
+ },
+ "milk": {
+  "label": "新 init 状态（init20-49 未用于标定/模板/z_prior/规则调整；注意：各 init 的物体 XY 分布与标定集 init00-19 在约 1cm 内重叠）",
+  "n_states": 90,
+  "missing": [],
+  "by": {
+   "orig": {
+    "g": {
+     "n": 30,
+     "vanilla": 28,
+     "oracle": 29,
+     "visual": 29,
+     "x_rescue": [
+      "init46_orig"
+     ],
+     "x_break": [],
+     "g_rescue": [
+      "init46_orig"
+     ],
+     "g_break": [],
+     "rescue_denom": 2,
+     "break_denom": 28,
+     "oracle_kept": [
+      "init46_orig"
+     ],
+     "oracle_lost": [],
+     "visual_only_rescue": [],
+     "oracle_retention": 1.0,
+     "ci_x_minus_v": [
+      0.033,
+      0.0,
+      0.1
+     ],
+     "ci_x_minus_g": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ci_g_minus_v": [
+      0.033,
+      0.0,
+      0.1
+     ]
+    },
+    "t": {
+     "n": 30,
+     "vanilla": 28,
+     "oracle": 29,
+     "visual": 29,
+     "x_rescue": [
+      "init46_orig"
+     ],
+     "x_break": [],
+     "g_rescue": [
+      "init46_orig"
+     ],
+     "g_break": [],
+     "rescue_denom": 2,
+     "break_denom": 28,
+     "oracle_kept": [
+      "init46_orig"
+     ],
+     "oracle_lost": [],
+     "visual_only_rescue": [],
+     "oracle_retention": 1.0,
+     "ci_x_minus_v": [
+      0.033,
+      0.0,
+      0.1
+     ],
+     "ci_x_minus_g": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ci_g_minus_v": [
+      0.033,
+      0.0,
+      0.1
+     ]
+    }
+   },
+   "trans": {
+    "g": {
+     "n": 30,
+     "vanilla": 13,
+     "oracle": 18,
+     "visual": 20,
+     "x_rescue": [
+      "init20_trans",
+      "init23_trans",
+      "init25_trans",
+      "init27_trans",
+      "init29_trans",
+      "init35_trans",
+      "init37_trans",
+      "init45_trans"
+     ],
+     "x_break": [
+      "init41_trans"
+     ],
+     "g_rescue": [
+      "init23_trans",
+      "init25_trans",
+      "init28_trans",
+      "init33_trans",
+      "init35_trans",
+      "init49_trans"
+     ],
+     "g_break": [
+      "init32_trans"
+     ],
+     "rescue_denom": 17,
+     "break_denom": 13,
+     "oracle_kept": [
+      "init23_trans",
+      "init25_trans",
+      "init35_trans"
+     ],
+     "oracle_lost": [
+      "init28_trans",
+      "init33_trans",
+      "init49_trans"
+     ],
+     "visual_only_rescue": [
+      "init20_trans",
+      "init27_trans",
+      "init29_trans",
+      "init37_trans",
+      "init45_trans"
+     ],
+     "oracle_retention": 0.5,
+     "ci_x_minus_v": [
+      0.233,
+      0.067,
+      0.4
+     ],
+     "ci_x_minus_g": [
+      0.067,
+      -0.134,
+      0.267
+     ],
+     "ci_g_minus_v": [
+      0.167,
+      0.0,
+      0.333
+     ]
+    },
+    "t": {
+     "n": 30,
+     "vanilla": 6,
+     "oracle": 9,
+     "visual": 11,
+     "x_rescue": [
+      "init27_trans",
+      "init28_trans",
+      "init32_trans",
+      "init37_trans",
+      "init45_trans"
+     ],
+     "x_break": [],
+     "g_rescue": [
+      "init25_trans",
+      "init45_trans",
+      "init49_trans"
+     ],
+     "g_break": [],
+     "rescue_denom": 24,
+     "break_denom": 6,
+     "oracle_kept": [
+      "init45_trans"
+     ],
+     "oracle_lost": [
+      "init25_trans",
+      "init49_trans"
+     ],
+     "visual_only_rescue": [
+      "init27_trans",
+      "init28_trans",
+      "init32_trans",
+      "init37_trans"
+     ],
+     "oracle_retention": 0.333,
+     "ci_x_minus_v": [
+      0.167,
+      0.033,
+      0.3
+     ],
+     "ci_x_minus_g": [
+      0.067,
+      -0.1,
+      0.233
+     ],
+     "ci_g_minus_v": [
+      0.1,
+      0.0,
+      0.233
+     ]
+    }
+   },
+   "trans_y": {
+    "g": {
+     "n": 30,
+     "vanilla": 11,
+     "oracle": 12,
+     "visual": 15,
+     "x_rescue": [
+      "init26_trans_y",
+      "init28_trans_y",
+      "init43_trans_y",
+      "init46_trans_y"
+     ],
+     "x_break": [],
+     "g_rescue": [
+      "init28_trans_y",
+      "init46_trans_y"
+     ],
+     "g_break": [
+      "init30_trans_y"
+     ],
+     "rescue_denom": 19,
+     "break_denom": 11,
+     "oracle_kept": [
+      "init28_trans_y",
+      "init46_trans_y"
+     ],
+     "oracle_lost": [],
+     "visual_only_rescue": [
+      "init26_trans_y",
+      "init43_trans_y"
+     ],
+     "oracle_retention": 1.0,
+     "ci_x_minus_v": [
+      0.133,
+      0.033,
+      0.267
+     ],
+     "ci_x_minus_g": [
+      0.1,
+      0.0,
+      0.2
+     ],
+     "ci_g_minus_v": [
+      0.033,
+      -0.067,
+      0.167
+     ]
+    },
+    "t": {
+     "n": 30,
+     "vanilla": 11,
+     "oracle": 11,
+     "visual": 11,
+     "x_rescue": [],
+     "x_break": [],
+     "g_rescue": [
+      "init28_trans_y",
+      "init43_trans_y"
+     ],
+     "g_break": [
+      "init30_trans_y",
+      "init36_trans_y"
+     ],
+     "rescue_denom": 19,
+     "break_denom": 11,
+     "oracle_kept": [],
+     "oracle_lost": [
+      "init28_trans_y",
+      "init43_trans_y"
+     ],
+     "visual_only_rescue": [],
+     "oracle_retention": 0.0,
+     "ci_x_minus_v": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "ci_x_minus_g": [
+      0.0,
+      -0.133,
+      0.133
+     ],
+     "ci_g_minus_v": [
+      0.0,
+      -0.133,
+      0.133
+     ]
+    }
+   },
+   "trans+trans_y": {
+    "g": {
+     "n": 60,
+     "vanilla": 24,
+     "oracle": 30,
+     "visual": 35,
+     "x_rescue": [
+      "init20_trans",
+      "init23_trans",
+      "init25_trans",
+      "init26_trans_y",
+      "init27_trans",
+      "init28_trans_y",
+      "init29_trans",
+      "init35_trans",
+      "init37_trans",
+      "init43_trans_y",
+      "init45_trans",
+      "init46_trans_y"
+     ],
+     "x_break": [
+      "init41_trans"
+     ],
+     "g_rescue": [
+      "init23_trans",
+      "init25_trans",
+      "init28_trans",
+      "init28_trans_y",
+      "init33_trans",
+      "init35_trans",
+      "init46_trans_y",
+      "init49_trans"
+     ],
+     "g_break": [
+      "init30_trans_y",
+      "init32_trans"
+     ],
+     "rescue_denom": 36,
+     "break_denom": 24,
+     "oracle_kept": [
+      "init23_trans",
+      "init25_trans",
+      "init28_trans_y",
+      "init35_trans",
+      "init46_trans_y"
+     ],
+     "oracle_lost": [
+      "init28_trans",
+      "init33_trans",
+      "init49_trans"
+     ],
+     "visual_only_rescue": [
+      "init20_trans",
+      "init26_trans_y",
+      "init27_trans",
+      "init29_trans",
+      "init37_trans",
+      "init43_trans_y",
+      "init45_trans"
+     ],
+     "oracle_retention": 0.625,
+     "ci_x_minus_v": [
+      0.183,
+      0.083,
+      0.283
+     ],
+     "ci_x_minus_g": [
+      0.083,
+      -0.033,
+      0.2
+     ],
+     "ci_g_minus_v": [
+      0.1,
+      0.0,
+      0.217
+     ]
+    },
+    "t": {
+     "n": 60,
+     "vanilla": 17,
+     "oracle": 20,
+     "visual": 22,
+     "x_rescue": [
+      "init27_trans",
+      "init28_trans",
+      "init32_trans",
+      "init37_trans",
+      "init45_trans"
+     ],
+     "x_break": [],
+     "g_rescue": [
+      "init25_trans",
+      "init28_trans_y",
+      "init43_trans_y",
+      "init45_trans",
+      "init49_trans"
+     ],
+     "g_break": [
+      "init30_trans_y",
+      "init36_trans_y"
+     ],
+     "rescue_denom": 43,
+     "break_denom": 17,
+     "oracle_kept": [
+      "init45_trans"
+     ],
+     "oracle_lost": [
+      "init25_trans",
+      "init28_trans_y",
+      "init43_trans_y",
+      "init49_trans"
+     ],
+     "visual_only_rescue": [
+      "init27_trans",
+      "init28_trans",
+      "init32_trans",
+      "init37_trans"
+     ],
+     "oracle_retention": 0.2,
+     "ci_x_minus_v": [
+      0.083,
+      0.017,
+      0.15
+     ],
+     "ci_x_minus_g": [
+      0.033,
+      -0.05,
+      0.133
+     ],
+     "ci_g_minus_v": [
+      0.05,
+      -0.033,
+      0.133
+     ]
+    }
+   },
+   "ALL": {
+    "g": {
+     "n": 90,
+     "vanilla": 52,
+     "oracle": 59,
+     "visual": 64,
+     "x_rescue": [
+      "init20_trans",
+      "init23_trans",
+      "init25_trans",
+      "init26_trans_y",
+      "init27_trans",
+      "init28_trans_y",
+      "init29_trans",
+      "init35_trans",
+      "init37_trans",
+      "init43_trans_y",
+      "init45_trans",
+      "init46_orig",
+      "init46_trans_y"
+     ],
+     "x_break": [
+      "init41_trans"
+     ],
+     "g_rescue": [
+      "init23_trans",
+      "init25_trans",
+      "init28_trans",
+      "init28_trans_y",
+      "init33_trans",
+      "init35_trans",
+      "init46_orig",
+      "init46_trans_y",
+      "init49_trans"
+     ],
+     "g_break": [
+      "init30_trans_y",
+      "init32_trans"
+     ],
+     "rescue_denom": 38,
+     "break_denom": 52,
+     "oracle_kept": [
+      "init23_trans",
+      "init25_trans",
+      "init28_trans_y",
+      "init35_trans",
+      "init46_orig",
+      "init46_trans_y"
+     ],
+     "oracle_lost": [
+      "init28_trans",
+      "init33_trans",
+      "init49_trans"
+     ],
+     "visual_only_rescue": [
+      "init20_trans",
+      "init26_trans_y",
+      "init27_trans",
+      "init29_trans",
+      "init37_trans",
+      "init43_trans_y",
+      "init45_trans"
+     ],
+     "oracle_retention": 0.667,
+     "ci_x_minus_v": [
+      0.133,
+      0.067,
+      0.211
+     ],
+     "ci_x_minus_g": [
+      0.056,
+      -0.022,
+      0.133
+     ],
+     "ci_g_minus_v": [
+      0.078,
+      0.0,
+      0.156
+     ]
+    },
+    "t": {
+     "n": 90,
+     "vanilla": 45,
+     "oracle": 49,
+     "visual": 51,
+     "x_rescue": [
+      "init27_trans",
+      "init28_trans",
+      "init32_trans",
+      "init37_trans",
+      "init45_trans",
+      "init46_orig"
+     ],
+     "x_break": [],
+     "g_rescue": [
+      "init25_trans",
+      "init28_trans_y",
+      "init43_trans_y",
+      "init45_trans",
+      "init46_orig",
+      "init49_trans"
+     ],
+     "g_break": [
+      "init30_trans_y",
+      "init36_trans_y"
+     ],
+     "rescue_denom": 45,
+     "break_denom": 45,
+     "oracle_kept": [
+      "init45_trans",
+      "init46_orig"
+     ],
+     "oracle_lost": [
+      "init25_trans",
+      "init28_trans_y",
+      "init43_trans_y",
+      "init49_trans"
+     ],
+     "visual_only_rescue": [
+      "init27_trans",
+      "init28_trans",
+      "init32_trans",
+      "init37_trans"
+     ],
+     "oracle_retention": 0.333,
+     "ci_x_minus_v": [
+      0.067,
+      0.022,
+      0.111
+     ],
+     "ci_x_minus_g": [
+      0.022,
+      -0.033,
+      0.078
+     ],
+     "ci_g_minus_v": [
+      0.044,
+      -0.011,
+      0.1
+     ]
+    }
+   }
+  },
+  "vision": {
+   "miss_prelift_mean": 0.156,
+   "exy_mm_prelift_median": 4.57
+  }
+ }
+}

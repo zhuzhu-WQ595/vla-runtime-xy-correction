@@ -1,0 +1,131 @@
+{
+ "pairs": 80,
+ "by_cond": {
+  "orig": {
+   "N": 20,
+   "v_g": 19,
+   "g_g": 19,
+   "g_res": 0,
+   "g_brk": 0,
+   "v_t": 18,
+   "g_t": 18,
+   "t_res": 0,
+   "t_brk": 0,
+   "corr_cov": 0.005,
+   "trig_eps": 4
+  },
+  "trans": {
+   "N": 20,
+   "v_g": 8,
+   "g_g": 14,
+   "g_res": 6,
+   "g_brk": 0,
+   "v_t": 5,
+   "g_t": 8,
+   "t_res": 4,
+   "t_brk": 1,
+   "corr_cov": 0.023,
+   "trig_eps": 13
+  },
+  "trans_y": {
+   "N": 20,
+   "v_g": 6,
+   "g_g": 10,
+   "g_res": 4,
+   "g_brk": 0,
+   "v_t": 6,
+   "g_t": 5,
+   "t_res": 0,
+   "t_brk": 1,
+   "corr_cov": 0.062,
+   "trig_eps": 17
+  },
+  "rot": {
+   "N": 20,
+   "v_g": 17,
+   "g_g": 16,
+   "g_res": 0,
+   "g_brk": 1,
+   "v_t": 13,
+   "g_t": 12,
+   "t_res": 1,
+   "t_brk": 2,
+   "corr_cov": 0.017,
+   "trig_eps": 8
+  }
+ },
+ "all": {
+  "N": 80,
+  "v_g": 50,
+  "g_g": 59,
+  "g_res": 10,
+  "g_brk": 1,
+  "v_t": 42,
+  "g_t": 43,
+  "t_res": 5,
+  "t_brk": 4,
+  "corr_cov": 0.027
+ },
+ "both_grasp": {
+  "n": 49,
+  "v_task": 42,
+  "g_task": 39,
+  "drops": [
+   [
+    "init01_trans",
+    true,
+    false
+   ],
+   [
+    "init02_trans",
+    false,
+    false
+   ],
+   [
+    "init02_rot",
+    false,
+    true
+   ],
+   [
+    "init03_trans",
+    false,
+    false
+   ],
+   [
+    "init06_rot",
+    true,
+    false
+   ],
+   [
+    "init09_rot",
+    false,
+    false
+   ],
+   [
+    "init15_trans_y",
+    true,
+    false
+   ],
+   [
+    "init16_rot",
+    false,
+    false
+   ],
+   [
+    "init17_orig",
+    false,
+    false
+   ],
+   [
+    "init17_trans",
+    false,
+    false
+   ],
+   [
+    "init19_rot",
+    true,
+    false
+   ]
+  ]
+ }
+}

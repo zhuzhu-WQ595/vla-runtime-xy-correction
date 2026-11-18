@@ -1,0 +1,17 @@
+tag,init,cond,cand_step,no_trigger,lock_step,g_c0,g_px,g_nx,g_ry,g_ly,t_c0,t_px,t_nx,t_ry,t_ly,px_du_at_close_mm,px_du_max_mm,px_dxy_at_close_mm,px_dyaw_at_close_deg,nx_du_at_close_mm,nx_du_max_mm,nx_dxy_at_close_mm,nx_dyaw_at_close_deg,ry_du_at_close_mm,ry_du_max_mm,ry_dxy_at_close_mm,ry_dyaw_at_close_deg,ly_du_at_close_mm,ly_du_max_mm,ly_dxy_at_close_mm,ly_dyaw_at_close_deg
+init00_trans,0,trans,48,False,0,False,False,False,True,False,False,False,False,True,False,4.5,4.5,6.7,0.2,-1.3,-2.7,1.3,0.2,0.9,-9.8,10.2,-13.6,6.8,-8.1,7.2,5.6
+init00_trans_y,0,trans_y,42,False,0,True,True,True,True,False,True,True,True,False,False,1.0,-6.5,1.5,-0.1,-0.6,9.4,1.0,-0.1,0.4,-35.2,6.5,-8.0,27.8,76.8,30.9,27.4
+init01_trans,1,trans,40,False,0,True,True,True,True,False,False,True,True,False,False,2.1,-5.4,7.4,-0.2,-0.4,-8.8,0.9,-0.0,-8.1,-15.9,12.2,-4.7,9.6,39.4,12.5,3.8
+init01_trans_y,1,trans_y,37,False,0,True,True,True,True,True,True,True,True,False,True,3.4,-19.0,3.5,0.1,-2.3,-23.7,2.4,-0.0,-5.9,-43.4,6.1,-5.5,8.4,-38.1,8.6,5.7
+init04_trans,4,trans,44,False,0,False,False,False,False,False,False,False,False,False,False,-28.5,13.3,35.6,2.8,1.8,-8.0,2.6,-2.0,-3.7,-7.8,8.6,-15.2,-6.8,-22.1,22.5,52.4
+init04_trans_y,4,trans_y,52,False,0,False,False,False,False,False,False,False,False,False,False,26.6,7.5,27.8,1.0,-6.2,-8.5,6.2,-0.5,-5.1,23.3,22.3,-14.0,-25.9,-25.5,43.9,39.9
+init06_trans,6,trans,49,False,0,True,True,True,True,True,True,True,True,True,False,2.8,7.7,3.2,0.1,-1.8,4.9,1.8,0.2,-7.0,-20.1,7.6,-6.8,2.1,11.8,12.3,15.1
+init06_trans_y,6,trans_y,50,False,0,False,True,True,False,False,False,False,False,False,False,0.8,2.4,8.1,-0.0,0.6,-1.9,7.1,-0.3,-11.8,-12.4,18.0,-34.8,-30.4,-29.3,36.7,42.0
+init09_trans,9,trans,,True,42,False,False,False,False,False,False,False,False,False,False,,,,,,,,,,,,,,,,
+init09_trans_y,9,trans_y,36,False,0,False,True,False,True,False,False,False,False,False,False,6.5,5.9,8.6,-0.4,-3.2,-3.7,5.4,-0.5,-7.2,-12.0,10.8,-19.1,-17.7,-19.1,18.5,45.6
+init12_trans,12,trans,37,False,0,False,True,True,True,True,False,True,True,True,True,1.5,-8.4,7.3,0.2,0.2,-6.8,17.6,0.6,-3.5,17.4,21.4,-7.0,9.1,9.3,9.2,5.5
+init12_trans_y,12,trans_y,37,False,0,True,True,False,False,False,False,False,False,False,False,2.7,3.5,6.0,0.1,0.9,-3.0,1.4,-0.2,-2.2,11.2,4.2,-5.4,-1.7,-31.6,8.0,40.8
+init15_trans,15,trans,35,False,0,True,True,True,True,True,True,True,True,True,False,1.6,10.3,9.8,-0.8,-1.3,-5.5,8.7,-0.3,-7.9,13.4,12.7,-7.7,7.3,-9.4,11.7,6.2
+init15_trans_y,15,trans_y,45,False,0,True,True,True,True,True,True,True,True,True,True,0.9,3.7,1.0,-0.2,-1.6,-5.7,1.6,-0.0,-6.3,9.0,8.1,-2.4,7.1,19.7,8.3,7.9
+init17_trans,17,trans,242,False,242,False,False,True,True,False,False,False,False,False,False,1.5,4.4,2.0,-0.0,-1.5,-50.0,1.9,-0.2,-14.4,-17.9,29.7,-10.2,11.5,13.5,12.7,2.8
+init17_trans_y,17,trans_y,250,False,0,False,True,False,False,False,False,False,False,False,False,5.6,-49.9,5.6,-0.1,-1.6,-17.1,3.5,-0.2,-4.5,-18.6,4.5,-5.2,3.7,-13.7,30.4,10.7

@@ -1,0 +1,39 @@
+{
+  "written": "2026-11-15，在读取或运行 init30-49 之前",
+  "original_config": {
+    "file": "runs/predictability/confirm_config.json",
+    "sha256": "508cb37831c353ad473673d9b527fe5040162363cde931aba68aa398e6ffe55d",
+    "status": "原文件不修改；其中全部规则与参数原样沿用"
+  },
+  "clarifications": {
+    "feasible_region": "算法使用的容差矩形：|e·body_y| <= 20 mm 且 |e·body_x| <= 10 mm。它是 C 规则内部的数值容差，不是经过验证的物理可抓取区域",
+    "C_fit_params_source": "全开发集重拟合（80 条 gate 轨迹拟合 M,b；48 个触发状态选 θ_C），开发集干预 24/48。开发集留出折中的 23/48 是五折各自参数下的结果，不用于确认",
+    "conditions": "orig、trans（即 trans_x，+5cm x）、rot（+30° yaw）、trans_y（+5cm y）",
+    "budget_matched_versions": "C_nom_matched 与 B_matched 的阈值按开发集 24/48 预算冻结；确认集上的实际干预次数允许不同"
+  },
+  "secondary_rule_short_axis": {
+    "status": "事后提出（看过开发集结局之后），确认前冻结；只作次级对照",
+    "name": "S_short",
+    "feature": "|e·body_y|，e = eef_xy - tgt_xy（与 C_fit 相同的基点，取决策前观测，索引 t*-2）；body_y = (-sin psi, cos psi)，psi = yaw(tgt_quat[t*-2], xyzw)；称为“物体短轴误差”（四个条件统一用此名称）",
+    "rule": "tug iff |e·body_y| > 0.010196 m",
+    "calibration": "只用开发集 48 个触发状态的 |e·body_y| 分布（不看标签），目标为 C_fit 的全开发集干预数 24/48。降序第 24 个值为 10.323 mm，第 25 个为 10.069 mm；取中点 10.196 mm，开发集干预恰为 24/48",
+    "ties": "开发集分界处无并列值；确认集上用严格大于，恰好等于阈值时不牵引",
+    "not_used": "没有使用救回例 23-35 mm 与破坏例 8-12 mm 之间的间隔来定阈值",
+    "direction": "误差越大越倾向牵引，与规则 A 的方向一致",
+    "naming": "日志中没有末端姿态，无法逐步核对夹爪闭合方向与盒体短轴的相对朝向，因此不称其为“夹爪闭合方向”"
+  },
+  "rules_evaluated": ["always_a0 (=2C)", "always_a1", "C_fit (主规则)", "C_nom", "C_nom_matched", "B_fixed (修正平局)", "B_matched", "S_short (次级)"],
+  "pipeline": {
+    "orchestrator": "scripts/run_confirmation.py：gate -> detect_triggers.scan（冻结代码）-> 每个触发状态跑 branch α0/α1",
+    "analysis": "scripts/analyze_confirmation.py：从 confirm_config.json 与本附录读取参数，不重新拟合任何参数",
+    "checks": "α0 分支 exec_action 与 gate 逐位一致；α1 前缀与 gate 逐位一致；任一不一致的状态记为实现异常并单列处理过程"
+  },
+  "reporting": {
+    "per_rule": "干预数、相对 α0 的救回/破坏、稳定抓取数/80、完整入篮数/80，按条件分列",
+    "C_fit_vs_always_a1": "单列“避免的破坏”（全牵破坏而 C_fit 未牵）与“错过的救回”（全牵救回而 C_fit 未牵）",
+    "disagreements": "C_fit 与 S_short、B_fixed、B_matched、C_nom、C_nom_matched 的决策不同次数，以及其中改变抓取或入篮终点的病例",
+    "uncertainty": "以 init 为配对簇（20 簇）做 bootstrap，10000 次，seed=20261115，报告差值的 95% 区间",
+    "H1": "H1（C_fit 破坏数 <= 全牵）记为设计性质检查：C_fit 只在全牵也会牵的状态上牵引，因此 H1 在构造上必然成立",
+    "few_disagreements": "若两规则之间改变终点的有效分歧只有 0-1 个，直接写“本次确认无法区分两种规则”"
+  }
+}
